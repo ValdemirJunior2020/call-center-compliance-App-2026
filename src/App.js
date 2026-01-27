@@ -27,7 +27,10 @@ export default function App() {
     try {
       setIsLoading(true);
 
-      const res = await fetch("http://localhost:5050/api/ask", {
+      const API_BASE = process.env.REACT_APP_API_BASE_URL || "http://localhost:5050";
+
+const res = await fetch(`${API_BASE}/api/ask`, {
+
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ mode, question: q }),
@@ -47,51 +50,49 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      {/* NAVBAR */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div className="container-fluid">
-          <span className="navbar-brand fw-bold">Compliance Assistant</span>
-
-          {/* Center loader video (ONLY while loading) */}
-          <div className="navbar-center">
-            {isLoading ? (
-              <video
-                className="navbar-logo-video"
-                src="/logo-animation-video.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
-            ) : null}
-          </div>
-
-          <div className="d-flex align-items-center gap-2">
-            <select
-              className="form-select form-select-sm"
-              style={{ width: 170 }}
-              value={mode}
-              onChange={(e) => setMode(e.target.value)}
-              disabled={isLoading}
-            >
-              <option value="Matrix-2026">Matrix-2026</option>
-              <option value="Training Guide-2025" disabled>
-                Training Guide-2025 (soon)
-              </option>
-              <option value="QA Form-2023" disabled>
-                QA Form-2023 (soon)
-              </option>
-            </select>
-          </div>
+      {/* NAVBAR (center logo always, bigger) */}
+      <header className="navbar">
+        {/* left column (optional brand/title) */}
+        <div className="navbar-side navbar-left">
+          <span className="navbar-title">Compliance Assistant</span>
         </div>
-      </nav>
+
+        {/* center column (logo always centered) */}
+        <div className="navbar-center">
+        <video
+  className={`navbar-logo-video ${isLoading ? "loading" : ""}`}
+  src={`${process.env.PUBLIC_URL}/logo-animation-video.mp4`}
+  autoPlay
+  loop
+  muted
+  playsInline
+/>
+
+        </div>
+
+        {/* right column (mode selector) */}
+        <div className="navbar-side navbar-right">
+          <select
+            className="mode-select"
+            value={mode}
+            onChange={(e) => setMode(e.target.value)}
+            disabled={isLoading}
+          >
+            <option value="Matrix-2026">Matrix-2026</option>
+            <option value="Training Guide-2025" disabled>
+              Training Guide-2025 (soon)
+            </option>
+            <option value="QA Form-2023" disabled>
+              QA Form-2023 (soon)
+            </option>
+          </select>
+        </div>
+      </header>
 
       {/* HERO FULL SCREEN */}
       <div className="hero-container">
-        {/* ✅ This is what brings your full-screen background back */}
-        {/* Put your new image inside /public and set its name here */}
+        {/* Background image */}
         <img className="hero-img" src="/background/hero.png" alt="Background" />
-
 
         {/* Overlay */}
         <div className="hero-overlay">

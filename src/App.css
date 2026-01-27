@@ -10,6 +10,10 @@ body,
   background: #1e2328;
 }
 
+.app-shell {
+  min-height: 100vh;
+}
+
 /* =========================
    HERO CONTAINER (FULL SCREEN)
    ========================= */
@@ -30,117 +34,113 @@ body,
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* key */
+  object-fit: cover;
   object-position: center;
-  border-radius: 0;
-  transform: none;
-  box-shadow: none;
+  z-index: 0;
 }
 
-/* Subtle dark overlay for contrast */
+/* Dark overlay for contrast */
 .hero-container::after {
   content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(
     circle at center,
-    rgba(0, 0, 0, 0.25),
-    rgba(0, 0, 0, 0.55)
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.6)
   );
   z-index: 1;
 }
 
 /* =========================
-   HERO OVERLAY
+   HERO OVERLAY (MOVED UP)
    ========================= */
 
 .hero-overlay {
   position: absolute;
-  top: 22%;
+  top: 14%; /* 🔼 moved UP */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
   padding: 0 16px;
-  z-index: 5; /* above the dark overlay */
-}
-
-/* Glass cards */
-.hero-overlay .card {
-  background: rgba(18, 22, 28, 0.55);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
-  color: #fff;
+  z-index: 5;
 }
 
 /* =========================
-   NAVBAR LOADER VIDEO
+   CARD (FIXED HEIGHT)
    ========================= */
+
+.hero-overlay .card {
+  background: rgba(18, 22, 28, 0.6);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
+  max-height: 72vh;          /* ✅ prevents page stretch */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card body should scroll internally */
+.hero-overlay .card-body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   ANSWER BOX (SCROLLS)
+   ========================= */
+
+.answer-card {
+  margin-top: 14px;
+  background: rgba(12, 15, 18, 0.85);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #e6e6e6;
+  font-size: 14px;
+  line-height: 1.5;
+
+  max-height: 260px;   /* 🔒 controlled height */
+  overflow-y: auto;    /* ✅ scrolls instead of pushing */
+}
+
+/* Headings inside markdown */
+.answer-card h3,
+.answer-card h4 {
+  color: #6fd1ff;
+  margin-top: 12px;
+}
+
+/* Source footer */
+.answer-source {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 12px;
+  color: #9aa4ad;
+}
+
+/* =========================
+   NAVBAR LOGO VIDEO
+   ========================= */
+
+.navbar {
+  height: 64px;
+}
 
 .navbar-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 56px;
-  pointer-events: none;
 }
 
 .navbar-logo-video {
-  height: 44px;
+  height: 54px; /* 🔥 bigger logo */
   width: auto;
   object-fit: contain;
   pointer-events: none;
-  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.45));
-}
-
-/* =========================
-   ANSWER BOX (MARKDOWN)
-   ========================= */
-
-.answer-card {
-  background: rgba(18, 22, 28, 0.9);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 16px 18px;
-  color: #e6e6e6;
-  font-size: 14px;
-  line-height: 1.5;
-  max-height: 420px;
-  overflow-y: auto;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.answer-card h1,
-.answer-card h2,
-.answer-card h3 {
-  margin-top: 12px;
-  margin-bottom: 8px;
-  font-size: 15px;
-  font-weight: 700;
-  color: #6fd1ff;
-}
-
-.answer-card ul {
-  margin-left: 18px;
-  margin-bottom: 10px;
-}
-
-.answer-source {
-  margin-top: 14px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 12px;
-  color: #9aa4ad;
-}
-
-.loading-hint {
-  opacity: 0.9;
 }
 
 /* =========================
@@ -148,16 +148,54 @@ body,
    ========================= */
 
 @media (max-width: 768px) {
-  .hero-container {
-    height: calc(100vh - 56px);
-  }
-
   .hero-overlay {
-    top: 18%;
+    top: 10%;
     max-width: 92%;
   }
 
   .navbar-logo-video {
-    height: 34px;
+    height: 42px;
   }
+
+  .answer-card {
+    max-height: 220px;
+  }
+}
+/* =========================
+   NAVBAR LOGO – LOADING EFFECT
+   ========================= */
+
+.navbar-logo-video {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  opacity: 0.9;
+}
+
+/* 🔥 Bigger + more presence while loading */
+.navbar-logo-video.loading {
+  height: 86px;                 /* ⬅️ bigger */
+  opacity: 1;
+  filter: drop-shadow(0 0 18px rgba(111, 209, 255, 0.6));
+  transform: scale(1.05);
+}
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo-video {
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+/* Bigger when loading */
+.loading-big {
+  height: 80px;
 }
