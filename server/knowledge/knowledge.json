@@ -1,0 +1,1779 @@
+[
+  {
+    "id": "Matrix-2026:Voice Matrix:row:1",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 1,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "* guest can pay with their card and email us the receipt ",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": "",
+      "__EMPTY_6": ""
+    },
+    "text": "__EMPTY_2: * guest can pay with their card and email us the receipt"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:2",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 2,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Hotel & Reservation Issues ",
+      "__EMPTY_2": "Instructions",
+      "__EMPTY_3": "Slack​",
+      "__EMPTY_4": "Refund Queue",
+      "__EMPTY_5": "Create a Ticket",
+      "__EMPTY_6": "Supervisor "
+    },
+    "text": "__EMPTY_1: Hotel & Reservation Issues | __EMPTY_2: Instructions | __EMPTY_3: Slack​ | __EMPTY_4: Refund Queue | __EMPTY_5: Create a Ticket | __EMPTY_6: Supervisor"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:3",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 3,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Reservation not found at check-in",
+      "__EMPTY_2": "1. Call Supplier, 2. If unconfirmed by the Supplier in 20 minutes, 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). ",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "Yes"
+    },
+    "text": "__EMPTY_1: Reservation not found at check-in | __EMPTY_2: 1. Call Supplier, 2. If unconfirmed by the Supplier in 20 minutes, 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NONE | __EMPTY_6: Yes"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:4",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 4,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Overbooking leading to relocation (“walked” reservation) or Hotel Is Closed Down",
+      "__EMPTY_2": "1. Call Supplier, 2. If unconfirmed by the Supplier in 10 minutes, 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). ",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "Yes"
+    },
+    "text": "__EMPTY_1: Overbooking leading to relocation (“walked” reservation) or Hotel Is Closed Down | __EMPTY_2: 1. Call Supplier, 2. If unconfirmed by the Supplier in 10 minutes, 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NONE | __EMPTY_6: Yes"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:5",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 5,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Incorrect guest name or modifying name ",
+      "__EMPTY_2": "If Name: Call the hotel and ask them to \"add\" the name (not to change the name), 2. If the hotel refuses then call the supplier and ask them to change it. 3. If the supplier is unable please go back to the phone and let the guest know you will rebook them under the correct name. 4. If they agree, create a voucher and rebook them under their preferred name. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. If the guest declines support then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 7. Process a refund via the queue for the client and advise them of the refund timeline (2-7 business days).",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "No"
+    },
+    "text": "__EMPTY_1: Incorrect guest name or modifying name | __EMPTY_2: If Name: Call the hotel and ask them to \"add\" the name (not to change the name), 2. If the hotel refuses then call the supplier and ask them to change it. 3. If the supplier is unable please go back to the phone and let the guest know you will rebook them under the correct name. 4. If they agree, create a voucher and rebook them under their preferred name. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. If the guest declines support then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 7. Process a refund via the queue for the client and advise them of the refund timeline (2-7 business days). | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NONE | __EMPTY_6: No"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:6",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 6,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Incorrect  dates or modifying dates",
+      "__EMPTY_2": "If the issue is the dates: (Prepaid) 1. Create a voucher via the refund queue and rebook the guest for the correct dates. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** The exception would be in the client is lowering the number of nights the client will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for the dates to be changed, if the hotel agrees note the request accurately with the hotel staff member's name, (if possible) the confirmation number, and the email of the front desk. 2. Let the guest know their requested change is completed. 3. If the hotel declines the modification, check the website to confirm we have availability, advise the guest that you will need to request cancellation to rebook them, go back to the hotel, obtain FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred hotel or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. ",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "No"
+    },
+    "text": "__EMPTY_1: Incorrect  dates or modifying dates | __EMPTY_2: If the issue is the dates: (Prepaid) 1. Create a voucher via the refund queue and rebook the guest for the correct dates. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** The exception would be in the client is lowering the number of nights the client will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for the dates to be changed, if the hotel agrees note the request accurately with the hotel staff member's name, (if possible) the confirmation number, and the email of the front desk. 2. Let the guest know their requested change is completed. 3. If the hotel declines the modification, check the website to confirm we have availability, advise the guest that you will need to request cancellation to rebook them, go back to the hotel, obtain FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred hotel or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NONE | __EMPTY_6: No"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:7",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 7,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Incorrect number of guests or modifying guest count",
+      "__EMPTY_2": "If the property is in the USA and not a resort: Call the front desk and have the reservation updated for the correct number of guests. If the hotel property is outside the USA or is a resort: 1. Create a voucher via the refund queue and rebook the guest for the correct occupancy. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation**  If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for the occupancy to be changed, if the hotel agrees note the request accurately with the hotel staff member's name, (if possible) the confirmation number, and the email of the front desk. 2. Let the guest know their requested change is completed. 3. If the hotel declines the modification, check the website to confirm we have availability, advise the guest that you will need to request cancellation to rebook them, go back to the hotel, obtain FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred hotel or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. IF THE RESERVATION IS MORE YOU WILL ASK THE GUEST TO PAY THE DIFFERNCE AND OPEN A TICKET FOR SUPERVISOR REVIEW. OCCUPANCY ERROR FROM SALES AGENTS WILL BE REFUNDED TO THE GUEST; PLEASE ADVISE THE GUEST OF THIS AND LET THEM KNOW IT WILL BE REVIEWED IN 1-2 BUSINESS DAYS. IF THE GUEST REFUSES TO PAY THE DIFFERENCE THEN YOU WILL NEED TO NOTIFY ON YOUR ON SHIFT SUPERVISOR SO THEY CAN GET A VOUCHER FROM US TO PAY THE DIFFERENCE. THIS IS FOR SITE ERRORS AND SALES AGENT ERRORS THAT WE CAN SUPPORT THE DIFFERENCE IN COST.",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "YES"
+    },
+    "text": "__EMPTY_1: Incorrect number of guests or modifying guest count | __EMPTY_2: If the property is in the USA and not a resort: Call the front desk and have the reservation updated for the correct number of guests. If the hotel property is outside the USA or is a resort: 1. Create a voucher via the refund queue and rebook the guest for the correct occupancy. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation**  If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for the occupancy to be changed, if the hotel agrees note the request accurately with the hotel staff member's name, (if possible) the confirmation number, and the email of the front desk. 2. Let the guest know their requested change is completed. 3. If the hotel declines the modification, check the website to confirm we have availability, advise the guest that you will need to request cancellation to rebook them, go back to the hotel, obtain FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred hotel or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. IF THE RESERVATION IS MORE YOU WILL ASK THE GUEST TO PAY THE DIFFERNCE AND OPEN A TICKET FOR SUPERVISOR REVIEW. OCCUPANCY ERROR FROM SALES AGENTS WILL BE REFUNDED TO THE GUEST; PLEASE ADVISE THE GUEST OF THIS AND LET THEM KNOW IT WILL BE REVIEWED IN 1-2 BUSINESS DAYS. IF THE GUEST REFUSES TO PAY THE DIFFERENCE THEN YOU WILL NEED TO NOTIFY ON YOUR ON SHIFT SUPERVISOR SO THEY CAN GET A VOUCHER FROM US TO PAY THE DIFFERENCE. THIS IS FOR SITE ERRORS AND SALES AGENT ERRORS THAT WE CAN SUPPORT THE DIFFERENCE IN COST. | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NONE | __EMPTY_6: YES"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:8",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 8,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Payment declined at check-in despite prepayment",
+      "__EMPTY_2": "1. Call Supplier, 2. If unpaid by the Supplier in 20 minutes, 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). ",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "YES"
+    },
+    "text": "__EMPTY_1: Payment declined at check-in despite prepayment | __EMPTY_2: 1. Call Supplier, 2. If unpaid by the Supplier in 20 minutes, 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NONE | __EMPTY_6: YES"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:9",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 9,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Rebooking due to wrong hotel booked or modifying to a new hotel",
+      "__EMPTY_2": " (Prepaid) 1. Create a voucher via the refund queue and rebook the guest for the correct hotel. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** The exception would be in the client is lowering the number of nights the client will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred hotel or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. ",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Rebooking due to wrong hotel booked or modifying to a new hotel | __EMPTY_2: (Prepaid) 1. Create a voucher via the refund queue and rebook the guest for the correct hotel. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** The exception would be in the client is lowering the number of nights the client will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred hotel or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:10",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 10,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Shuttle not available to get to property",
+      "__EMPTY_2": "Offer the guest 15% compensation toward ordering an UBER or LYFT and create the refund request in the refund queue. If they decline and say it will cost more than the 15% advise the guest they can book an Uber or Lyft and forward the receipt along with their itinerary to Reservations@HotelPlanner.com for reimbursement. Note the booking accurately and in detail.",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Shuttle not available to get to property | __EMPTY_2: Offer the guest 15% compensation toward ordering an UBER or LYFT and create the refund request in the refund queue. If they decline and say it will cost more than the 15% advise the guest they can book an Uber or Lyft and forward the receipt along with their itinerary to Reservations@HotelPlanner.com for reimbursement. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:11",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 11,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Early check-in or late check-out requests ",
+      "__EMPTY_2": "Call the hotel and make the request on behalf of the guest. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Early check-in or late check-out requests | __EMPTY_2: Call the hotel and make the request on behalf of the guest. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:12",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 12,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Early check-in or late check-out not honored",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If not agent error then advise these requests are to the discretion of the hotel. If the guest advises this is due to sales agent error then open a ticket for further review. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Early check-in or late check-out not honored | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If not agent error then advise these requests are to the discretion of the hotel. If the guest advises this is due to sales agent error then open a ticket for further review. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:13",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 13,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Hotel unaware of special requests or notes",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Hotel unaware of special requests or notes | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:14",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 14,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Additional deposits or incidentals required unexpectedly",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Additional deposits or incidentals required unexpectedly | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:15",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 15,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Long wait times or poor service at check-in",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. These options are to the discretion of the hotel and not in our control.",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Long wait times or poor service at check-in | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. These options are to the discretion of the hotel and not in our control. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:16",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 16,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Duplicate bookings made accidentally",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES ",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Duplicate bookings made accidentally | __EMPTY_3: NO | __EMPTY_4: YES | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:17",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 17,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Room type, Bed type or accessibility features not honored or Modifying Room Request",
+      "__EMPTY_2": "1. Call the hotel and ask them to move the guest to the appropriate room or requested room type 2. If the hotel refuses to do the change complimentary then ask them how much the upgrade or room change will cost. If the hotel agrees to charge a fee or the upgrade then advise the guest to pay the charge upon arrival. Ask the guest to email the receipt of the charge to Reservations@HotelPlanner.com for reimbursement. 3. If the hotel refuses all changes and requires a new reservation, confirm with the front desk the property has availabitlity if we rebook the guest for the correct room type, once the hotel confirms they do, request a cancellation on the existing room for FOC to rebook the guest, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Advise the guest you will rebook them for the correct room if the guest agrees, create a voucher and rebook them for their preferred room type. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 6. If the guest declines support then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 7. Process a refund via the queue for the client and advise them of the refund timeline (2-7 business days).",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Room type, Bed type or accessibility features not honored or Modifying Room Request | __EMPTY_2: 1. Call the hotel and ask them to move the guest to the appropriate room or requested room type 2. If the hotel refuses to do the change complimentary then ask them how much the upgrade or room change will cost. If the hotel agrees to charge a fee or the upgrade then advise the guest to pay the charge upon arrival. Ask the guest to email the receipt of the charge to Reservations@HotelPlanner.com for reimbursement. 3. If the hotel refuses all changes and requires a new reservation, confirm with the front desk the property has availabitlity if we rebook the guest for the correct room type, once the hotel confirms they do, request a cancellation on the existing room for FOC to rebook the guest, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Advise the guest you will rebook them for the correct room if the guest agrees, create a voucher and rebook them for their preferred room type. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 6. If the guest declines support then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 7. Process a refund via the queue for the client and advise them of the refund timeline (2-7 business days). | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:18",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 18,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Promised amenities missing (breakfast, parking, Wi-Fi, view)",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Promised amenities missing (breakfast, parking, Wi-Fi, view) | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:19",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 19,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Rate does not include expected inclusions",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Rate does not include expected inclusions | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:20",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 20,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Pricing & Payment Issues ",
+      "__EMPTY_2": "Instructions",
+      "__EMPTY_3": "Slack​",
+      "__EMPTY_4": "Refund Queue",
+      "__EMPTY_5": "Create a Ticket",
+      "__EMPTY_6": "Supervisor "
+    },
+    "text": "__EMPTY_1: Pricing & Payment Issues | __EMPTY_2: Instructions | __EMPTY_3: Slack​ | __EMPTY_4: Refund Queue | __EMPTY_5: Create a Ticket | __EMPTY_6: Supervisor"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:21",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 21,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Payment declined at check-in despite prepayment",
+      "__EMPTY_2": "1. Call Supplier, 2. If unpaid by the Supplier in 20 minutes 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). EXCEPTION IS DERBYSOFT ** INSTEAD OF CALLING THE SUPPLIER** ASK THE CHANNEL MANAGER FOR THE VIRTUAL CARD. IF NOT PROVIDED IN 20 MINUTES; MOVE FORWARD WITH REBOOKING THE GUEST.",
+      "__EMPTY_3": "YES",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Payment declined at check-in despite prepayment | __EMPTY_2: 1. Call Supplier, 2. If unpaid by the Supplier in 20 minutes 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). EXCEPTION IS DERBYSOFT ** INSTEAD OF CALLING THE SUPPLIER** ASK THE CHANNEL MANAGER FOR THE VIRTUAL CARD. IF NOT PROVIDED IN 20 MINUTES; MOVE FORWARD WITH REBOOKING THE GUEST. | __EMPTY_3: YES | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:22",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 22,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Hotel requests payment again for a prepaid booking",
+      "__EMPTY_2": "1. Call the Supplier to provide payment for the hotel. 2. If unpaid by the Supplier in 20 minutes create a ticket and advise the hotel we will have this resolved in 24 hours. EXCEPTION IS DERBYSOFT ASK THE CHANNEL MANAGER FOR THE VIRTUAL CARD. IF NOT PROVIDED WITHIN 5 MINUTES; OPEN A TICKET AND ADVISE THE HOTEL WE WILL HAVE THIS RESOLVED IN 24 HOURS. ",
+      "__EMPTY_3": "YES",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "Yes - Drop Down Option \"Hotel Needs Support\" if unresolved",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Hotel requests payment again for a prepaid booking | __EMPTY_2: 1. Call the Supplier to provide payment for the hotel. 2. If unpaid by the Supplier in 20 minutes create a ticket and advise the hotel we will have this resolved in 24 hours. EXCEPTION IS DERBYSOFT ASK THE CHANNEL MANAGER FOR THE VIRTUAL CARD. IF NOT PROVIDED WITHIN 5 MINUTES; OPEN A TICKET AND ADVISE THE HOTEL WE WILL HAVE THIS RESOLVED IN 24 HOURS. | __EMPTY_3: YES | __EMPTY_4: NO | __EMPTY_5: Yes - Drop Down Option \"Hotel Needs Support\" if unresolved | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:23",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 23,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Charged more than expected  (resort fees or local fees)",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Charged more than expected  (resort fees or local fees) | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:24",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 24,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Price Matching & Complaints regarding Tax Recovery & Fees",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Price Matching & Complaints regarding Tax Recovery & Fees | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:25",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 25,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Currency conversion discrepancies",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Currency conversion discrepancies | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:26",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 26,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Refund delays after cancellation or modification",
+      "__EMPTY_2": "Review and Create a Refund in the Refund Queue",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Refund delays after cancellation or modification | __EMPTY_2: Review and Create a Refund in the Refund Queue | __EMPTY_3: NO | __EMPTY_4: YES | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:27",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 27,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Discrepanies from booking refundable vs. non-refundable ",
+      "__EMPTY_2": " (Prepaid) 1. Create a voucher via the refund queue and rebook the guest for the correct policy. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** The exception would be in the client is lowering the number of nights the client will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred policy or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. 6. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property and provide it to the guest to request a free cancellation.",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Discrepanies from booking refundable vs. non-refundable | __EMPTY_2: (Prepaid) 1. Create a voucher via the refund queue and rebook the guest for the correct policy. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** The exception would be in the client is lowering the number of nights the client will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred policy or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. 6. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property and provide it to the guest to request a free cancellation. | __EMPTY_3: NO | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:28",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 28,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Unable to \"Create a Refund\" in the refund queue",
+      "__EMPTY_2": "The refund tool is not working ",
+      "__EMPTY_3": "YES",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "YES"
+    },
+    "text": "__EMPTY_1: Unable to \"Create a Refund\" in the refund queue | __EMPTY_2: The refund tool is not working | __EMPTY_3: YES | __EMPTY_4: NO | __EMPTY_5: NONE | __EMPTY_6: YES"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:29",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 29,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Supplier, Hotel, and Group Calls ",
+      "__EMPTY_2": "Instructions",
+      "__EMPTY_3": "Slack​",
+      "__EMPTY_4": "Refund Queue",
+      "__EMPTY_5": "Create a Ticket",
+      "__EMPTY_6": "Supervisor "
+    },
+    "text": "__EMPTY_1: Supplier, Hotel, and Group Calls | __EMPTY_2: Instructions | __EMPTY_3: Slack​ | __EMPTY_4: Refund Queue | __EMPTY_5: Create a Ticket | __EMPTY_6: Supervisor"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:30",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 30,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Hotel Calls ",
+      "__EMPTY_2": "Create a ticket for under \"Hotel Needs Support\", if they wish to speak with a manager please ask them to email VIPRES@HotelPlanner.com to contact our Service Managers.",
+      "__EMPTY_3": "No",
+      "__EMPTY_4": "No ",
+      "__EMPTY_5": "Yes - Drop Down Option \"Hotel Needs Support\"",
+      "__EMPTY_6": "No"
+    },
+    "text": "__EMPTY_1: Hotel Calls | __EMPTY_2: Create a ticket for under \"Hotel Needs Support\", if they wish to speak with a manager please ask them to email VIPRES@HotelPlanner.com to contact our Service Managers. | __EMPTY_3: No | __EMPTY_4: No | __EMPTY_5: Yes - Drop Down Option \"Hotel Needs Support\" | __EMPTY_6: No"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:31",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 31,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Supplier Calls ",
+      "__EMPTY_2": "Create a ticket for review under \"Supplier Needs Support\", if they wish to speak with a manager please ask them to email VIPRES@HotelPlanner.com to contact our Service Managers.",
+      "__EMPTY_3": "No",
+      "__EMPTY_4": "No ",
+      "__EMPTY_5": "Yes - Drop Down Option \"Supplier Needs Support\"",
+      "__EMPTY_6": "No"
+    },
+    "text": "__EMPTY_1: Supplier Calls | __EMPTY_2: Create a ticket for review under \"Supplier Needs Support\", if they wish to speak with a manager please ask them to email VIPRES@HotelPlanner.com to contact our Service Managers. | __EMPTY_3: No | __EMPTY_4: No | __EMPTY_5: Yes - Drop Down Option \"Supplier Needs Support\" | __EMPTY_6: No"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:32",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 32,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Group Clients ",
+      "__EMPTY_2": "Client is unable to contact the agent assigned/planner for their Group Request and/or unable to access their account",
+      "__EMPTY_3": "Yes",
+      "__EMPTY_4": "No ",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "No"
+    },
+    "text": "__EMPTY_1: Group Clients | __EMPTY_2: Client is unable to contact the agent assigned/planner for their Group Request and/or unable to access their account | __EMPTY_3: Yes | __EMPTY_4: No | __EMPTY_5: NONE | __EMPTY_6: No"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:33",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 33,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Cancellation & Confirmations",
+      "__EMPTY_2": "Instructions",
+      "__EMPTY_3": "Slack​",
+      "__EMPTY_4": "Refund Queue",
+      "__EMPTY_5": "Create a Ticket",
+      "__EMPTY_6": "Supervisor "
+    },
+    "text": "__EMPTY_1: Cancellation & Confirmations | __EMPTY_2: Instructions | __EMPTY_3: Slack​ | __EMPTY_4: Refund Queue | __EMPTY_5: Create a Ticket | __EMPTY_6: Supervisor"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:34",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 34,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Cancelling Refundable ",
+      "__EMPTY_2": "If a guest is requesting to cancel a refundable room, select cancel, and confirm their refund was processed. If the refund does not process automatically then put the refund into the refund queue. Do not refund the RPP. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - if not processed automatically",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Cancelling Refundable | __EMPTY_2: If a guest is requesting to cancel a refundable room, select cancel, and confirm their refund was processed. If the refund does not process automatically then put the refund into the refund queue. Do not refund the RPP. | __EMPTY_3: NO | __EMPTY_4: YES - if not processed automatically | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:35",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 35,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Cancelling Non Refundable ",
+      "__EMPTY_2": "If a guest is requesting to cancel a non refundable room type (reasons why we would process are agent error, hotel closure or unable to accept the guest, unpredictable or dangerous weather conditions, death, flight cancellations, medical, emergencies, gesture of goodwill due to the hotel's exception). 1. Check to see if the reservation has RPP, if yes offer to email the claim link to the client or the guest can receive 100% voucher immediately. If the guest denies the voucher please reach out to the hotel to see if we can obtain a waiver. 2. Call the hotel and request FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. If you are unable to obtain FOC, ask the hotel for a waiver minus one night (for multi nights), if it's still denied then we can offer the guest the option to add a name so a friend or family member can use the room. If none of these options are acceptable we would offer 100% voucher or 50% refund. Make sure the guest is aware the hotel is denying the refund in case they would like to contact the hotel directly for a full waiver. If you do obtain FOC then note the request accurately and completely. Then process a refund via the Refund Queue for the amount you were able to get waived. Advise the guest of the refund timeline (2-7 business days). Do not refund the RPP. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - when applicable ",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Cancelling Non Refundable | __EMPTY_2: If a guest is requesting to cancel a non refundable room type (reasons why we would process are agent error, hotel closure or unable to accept the guest, unpredictable or dangerous weather conditions, death, flight cancellations, medical, emergencies, gesture of goodwill due to the hotel's exception). 1. Check to see if the reservation has RPP, if yes offer to email the claim link to the client or the guest can receive 100% voucher immediately. If the guest denies the voucher please reach out to the hotel to see if we can obtain a waiver. 2. Call the hotel and request FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. If you are unable to obtain FOC, ask the hotel for a waiver minus one night (for multi nights), if it's still denied then we can offer the guest the option to add a name so a friend or family member can use the room. If none of these options are acceptable we would offer 100% voucher or 50% refund. Make sure the guest is aware the hotel is denying the refund in case they would like to contact the hotel directly for a full waiver. If you do obtain FOC then note the request accurately and completely. Then process a refund via the Refund Queue for the amount you were able to get waived. Advise the guest of the refund timeline (2-7 business days). Do not refund the RPP. | __EMPTY_3: NO | __EMPTY_4: YES - when applicable | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:36",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 36,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Conflicting information between hotel and booking provider",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - if they accept 15% compensation",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Conflicting information between hotel and booking provider | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - if they accept 15% compensation | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:37",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 37,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Guest directed to the wrong customer service provider",
+      "__EMPTY_2": "Ask the guest if they can review the charge to confirm who it is from and if it includes a phone number to call. If the guest can not a phone number and would like it reviewed; Please ask the guest to forward their charges to Reservations@HotelPlanner.com, please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Guest directed to the wrong customer service provider | __EMPTY_2: Ask the guest if they can review the charge to confirm who it is from and if it includes a phone number to call. If the guest can not a phone number and would like it reviewed; Please ask the guest to forward their charges to Reservations@HotelPlanner.com, please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:38",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 38,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Confirmation email not received or went to spam",
+      "__EMPTY_2": "If the guest needs a copy of their confirmation please confirm their email address and cell phone number to resend them a copy. Confirm it was received before disconnecting the call. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Confirmation email not received or went to spam | __EMPTY_2: If the guest needs a copy of their confirmation please confirm their email address and cell phone number to resend them a copy. Confirm it was received before disconnecting the call. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:39",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 39,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Delayed or unclear resolution timelines",
+      "__EMPTY_2": "If the guest wishes to speak with a manager please ask them to email VIPRES@HotelPlanner.com to contact our Service Managers; please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "YES"
+    },
+    "text": "__EMPTY_1: Delayed or unclear resolution timelines | __EMPTY_2: If the guest wishes to speak with a manager please ask them to email VIPRES@HotelPlanner.com to contact our Service Managers; please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NONE | __EMPTY_6: YES"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:40",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 40,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Post Stay Issues",
+      "__EMPTY_2": "Instructions",
+      "__EMPTY_3": "Slack​",
+      "__EMPTY_4": "Refund Queue",
+      "__EMPTY_5": "Create a Ticket",
+      "__EMPTY_6": "Supervisor "
+    },
+    "text": "__EMPTY_1: Post Stay Issues | __EMPTY_2: Instructions | __EMPTY_3: Slack​ | __EMPTY_4: Refund Queue | __EMPTY_5: Create a Ticket | __EMPTY_6: Supervisor"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:41",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 41,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Incorrect final charges",
+      "__EMPTY_2": "Advise the guest they can forward the receipt along with their itinerary to Reservations@HotelPlanner.com for review and reimbursement; please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Incorrect final charges | __EMPTY_2: Advise the guest they can forward the receipt along with their itinerary to Reservations@HotelPlanner.com for review and reimbursement; please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:42",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 42,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Missing or delayed refunds",
+      "__EMPTY_2": "Review and Create a Refund in the Refund Queue",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Missing or delayed refunds | __EMPTY_2: Review and Create a Refund in the Refund Queue | __EMPTY_3: NO | __EMPTY_4: YES | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:43",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 43,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Disputes over no-show or cancellation fees",
+      "__EMPTY_2": "Provide the guest with the following email to work with the dispute department directly ChargeReview@HotelPlanner.com;  please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Disputes over no-show or cancellation fees | __EMPTY_2: Provide the guest with the following email to work with the dispute department directly ChargeReview@HotelPlanner.com;  please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:44",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 44,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Hotel provided internal receipt to guest",
+      "__EMPTY_2": "Ask the client to email the receipt to Reservations@HotelPlanner.com;  please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Hotel provided internal receipt to guest | __EMPTY_2: Ask the client to email the receipt to Reservations@HotelPlanner.com;  please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:45",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 45,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Needs receipt or invoice",
+      "__EMPTY_2": "If the guest needs a copy of their confirmation please confirm their email address and cell phone number to resend them a copy. Confirm it was received before disconnecting the call. If the guest needs a detailed receipt, breakdown, or tax exempt please open a ticket for them under \"Needs Receipt\". Let the guest know we will have it completed in 24 hours and emailed over. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "Yes - Drop Down Option \"Needs Receipt\" for option 2",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Needs receipt or invoice | __EMPTY_2: If the guest needs a copy of their confirmation please confirm their email address and cell phone number to resend them a copy. Confirm it was received before disconnecting the call. If the guest needs a detailed receipt, breakdown, or tax exempt please open a ticket for them under \"Needs Receipt\". Let the guest know we will have it completed in 24 hours and emailed over. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: Yes - Drop Down Option \"Needs Receipt\" for option 2 | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:46",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 46,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Double Charged ",
+      "__EMPTY_2": "Please ask the guest to forward their charges to Reservations@HotelPlanner.com, please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Double Charged | __EMPTY_2: Please ask the guest to forward their charges to Reservations@HotelPlanner.com, please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:47",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 47,
+    "fields": {
+      "__EMPTY": "?",
+      "__EMPTY_1": "Mismatch between listing description and actual property",
+      "__EMPTY_2": "Please ask the guest to forward their screenshot to Reservations@HotelPlanner.com, please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY: ? | __EMPTY_1: Mismatch between listing description and actual property | __EMPTY_2: Please ask the guest to forward their screenshot to Reservations@HotelPlanner.com, please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:48",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 48,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Early departure after check in  (R and NR)",
+      "__EMPTY_2": "1. Ask the guest if the guest notified the property or received approval from the property for early departure. If the guest has a hotel staff name please note it down. 2.Call the hotel and obtain FOC for unused nights, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. Process a refund via the queue for the client of the unused nights and advise of the refund timeline (2-7 business days). ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Early departure after check in  (R and NR) | __EMPTY_2: 1. Ask the guest if the guest notified the property or received approval from the property for early departure. If the guest has a hotel staff name please note it down. 2.Call the hotel and obtain FOC for unused nights, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. Process a refund via the queue for the client of the unused nights and advise of the refund timeline (2-7 business days). | __EMPTY_3: NO | __EMPTY_4: YES | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Voice Matrix:row:49",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Voice Matrix",
+    "row": 49,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Asking for a refund on \"REFUND PROTECTION PLAN\"",
+      "__EMPTY_2": "If the guest requests for this plan to be cancelled and refunded, please click on void the policy and the refund will be processed automatically. If it's outside the 14 days to select \"void\" then you will note the booking accurately and process the refund amount only of the RPP in the Refund Queue. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES",
+      "__EMPTY_5": "NONE",
+      "__EMPTY_6": "NO"
+    },
+    "text": "__EMPTY_1: Asking for a refund on \"REFUND PROTECTION PLAN\" | __EMPTY_2: If the guest requests for this plan to be cancelled and refunded, please click on void the policy and the refund will be processed automatically. If it's outside the 14 days to select \"void\" then you will note the booking accurately and process the refund amount only of the RPP in the Refund Queue. | __EMPTY_3: NO | __EMPTY_4: YES | __EMPTY_5: NONE | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:1",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 1,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Hotel & Reservation Issues ",
+      "__EMPTY_2": "Instructions",
+      "__EMPTY_3": "Slack​",
+      "__EMPTY_4": "Refund Queue",
+      "__EMPTY_5": "Create a Ticket",
+      "__EMPTY_6": "Supervisor ",
+      "__EMPTY_7": "VIPRES"
+    },
+    "text": "__EMPTY_1: Hotel & Reservation Issues | __EMPTY_2: Instructions | __EMPTY_3: Slack​ | __EMPTY_4: Refund Queue | __EMPTY_5: Create a Ticket | __EMPTY_6: Supervisor | __EMPTY_7: VIPRES"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:2",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 2,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Reservation not found at check-in",
+      "__EMPTY_2": "1. Call Supplier, 2. If unconfirmed by the Supplier in 20 minutes, 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). ",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "No",
+      "__EMPTY_6": "Yes",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Reservation not found at check-in | __EMPTY_2: 1. Call Supplier, 2. If unconfirmed by the Supplier in 20 minutes, 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: No | __EMPTY_6: Yes"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:3",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 3,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Overbooking leading to relocation (“walked” reservation)",
+      "__EMPTY_2": "1. Call Supplier, 2. If unconfirmed by the Supplier in 10 minutes, 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). ",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "No",
+      "__EMPTY_6": "Yes",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Overbooking leading to relocation (“walked” reservation) | __EMPTY_2: 1. Call Supplier, 2. If unconfirmed by the Supplier in 10 minutes, 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: No | __EMPTY_6: Yes"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:4",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 4,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Incorrect guest name or modifying name ",
+      "__EMPTY_2": "If Name: Call the hotel and ask them to \"add\" the name (not to change the name), 2. If the hotel refuses then call the supplier and ask them to change it. 3. If the supplier is unable please go back to the phone and let the guest know you will rebook them under the correct name. 4. If they agree, create a voucher and rebook them under their preferred name. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. If the guest declines support then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 7. Process a refund via the queue for the client and advise them of the refund timeline (2-7 business days).",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "No",
+      "__EMPTY_6": "No",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Incorrect guest name or modifying name | __EMPTY_2: If Name: Call the hotel and ask them to \"add\" the name (not to change the name), 2. If the hotel refuses then call the supplier and ask them to change it. 3. If the supplier is unable please go back to the phone and let the guest know you will rebook them under the correct name. 4. If they agree, create a voucher and rebook them under their preferred name. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. If the guest declines support then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 7. Process a refund via the queue for the client and advise them of the refund timeline (2-7 business days). | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: No | __EMPTY_6: No"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:5",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 5,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Incorrect  dates or modifying dates",
+      "__EMPTY_2": "If the issue is the dates: (Prepaid) 1. Create a voucher via the refund queue and rebook the guest for the correct dates. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** The exception would be in the client is lowering the number of nights the client will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for the dates to be changed, if the hotel agrees note the request accurately with the hotel staff member's name, (if possible) the confirmation number, and the email of the front desk. 2. Let the guest know their requested change is completed. 3. If the hotel declines the modification, check the website to confirm we have availability, advise the guest that you will need to request cancellation to rebook them, go back to the hotel, obtain FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred hotel or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. ",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "No",
+      "__EMPTY_6": "No",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Incorrect  dates or modifying dates | __EMPTY_2: If the issue is the dates: (Prepaid) 1. Create a voucher via the refund queue and rebook the guest for the correct dates. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** The exception would be in the client is lowering the number of nights the client will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for the dates to be changed, if the hotel agrees note the request accurately with the hotel staff member's name, (if possible) the confirmation number, and the email of the front desk. 2. Let the guest know their requested change is completed. 3. If the hotel declines the modification, check the website to confirm we have availability, advise the guest that you will need to request cancellation to rebook them, go back to the hotel, obtain FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred hotel or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: No | __EMPTY_6: No"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:6",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 6,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Incorrect number of guests or modifying guest count",
+      "__EMPTY_2": "If the property is in the USA and not a resort: Call the front desk and have the reservation updated for the correct number of guests. If the hotel property is outside the USA or is a resort: 1. Create a voucher via the refund queue and rebook the guest for the correct occupancy. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation**  If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for the occupancy to be changed, if the hotel agrees note the request accurately with the hotel staff member's name, (if possible) the confirmation number, and the email of the front desk. 2. Let the guest know their requested change is completed. 3. If the hotel declines the modification, check the website to confirm we have availability, advise the guest that you will need to request cancellation to rebook them, go back to the hotel, obtain FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred hotel or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. IF THE RESERVATION IS MORE YOU WILL ASK THE GUEST TO PAY THE DIFFERNCE AND OPEN A TICKET FOR SUPERVISOR REVIEW. OCCUPANCY ERROR FROM SALES AGENTS WILL BE REFUNDED TO THE GUEST; PLEASE ADVISE THE GUEST OF THIS AND LET THEM KNOW IT WILL BE REVIEWED IN 1-2 BUSINESS DAYS. IF THE GUEST REFUSES TO PAY THE DIFFERENCE THEN YOU WILL NEED TO NOTIFY ON YOUR ON SHIFT SUPERVISOR SO THEY CAN GET A VOUCHER FROM US TO PAY THE DIFFERENCE. THIS IS FOR SITE ERRORS AND SALES AGENT ERRORS THAT WE CAN SUPPORT THE DIFFERENCE IN COST.",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "YES",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Incorrect number of guests or modifying guest count | __EMPTY_2: If the property is in the USA and not a resort: Call the front desk and have the reservation updated for the correct number of guests. If the hotel property is outside the USA or is a resort: 1. Create a voucher via the refund queue and rebook the guest for the correct occupancy. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation**  If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for the occupancy to be changed, if the hotel agrees note the request accurately with the hotel staff member's name, (if possible) the confirmation number, and the email of the front desk. 2. Let the guest know their requested change is completed. 3. If the hotel declines the modification, check the website to confirm we have availability, advise the guest that you will need to request cancellation to rebook them, go back to the hotel, obtain FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred hotel or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. IF THE RESERVATION IS MORE YOU WILL ASK THE GUEST TO PAY THE DIFFERNCE AND OPEN A TICKET FOR SUPERVISOR REVIEW. OCCUPANCY ERROR FROM SALES AGENTS WILL BE REFUNDED TO THE GUEST; PLEASE ADVISE THE GUEST OF THIS AND LET THEM KNOW IT WILL BE REVIEWED IN 1-2 BUSINESS DAYS. IF THE GUEST REFUSES TO PAY THE DIFFERENCE THEN YOU WILL NEED TO NOTIFY ON YOUR ON SHIFT SUPERVISOR SO THEY CAN GET A VOUCHER FROM US TO PAY THE DIFFERENCE. THIS IS FOR SITE ERRORS AND SALES AGENT ERRORS THAT WE CAN SUPPORT THE DIFFERENCE IN COST. | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NO | __EMPTY_6: YES"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:7",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 7,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Payment declined at check-in despite prepayment",
+      "__EMPTY_2": "1. Call Supplier, 2. If unpaid by the Supplier in 20 minutes, 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). ",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "YES",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Payment declined at check-in despite prepayment | __EMPTY_2: 1. Call Supplier, 2. If unpaid by the Supplier in 20 minutes, 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NO | __EMPTY_6: YES"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:8",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 8,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Rebooking due to wrong hotel booked or modifying to a new hotel",
+      "__EMPTY_2": " (Prepaid) 1. Create a voucher via the refund queue and rebook the guest for the correct hotel. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** The exception would be in the client is lowering the number of nights the client will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred hotel or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. ",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Rebooking due to wrong hotel booked or modifying to a new hotel | __EMPTY_2: (Prepaid) 1. Create a voucher via the refund queue and rebook the guest for the correct hotel. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** The exception would be in the client is lowering the number of nights the client will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred hotel or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:9",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 9,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Shuttle not available to get to property",
+      "__EMPTY_2": "Offer the guest 15% compensation toward ordering an UBER or LYFT and create the refund request in the refund queue. If they decline and say it will cost more than the 15% advise the guest they can book an Uber or Lyft and forward the receipt along with their itinerary to Reservations@HotelPlanner.com for reimbursement. Note the booking accurately and in detail.",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Shuttle not available to get to property | __EMPTY_2: Offer the guest 15% compensation toward ordering an UBER or LYFT and create the refund request in the refund queue. If they decline and say it will cost more than the 15% advise the guest they can book an Uber or Lyft and forward the receipt along with their itinerary to Reservations@HotelPlanner.com for reimbursement. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:10",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 10,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Early check-in or late check-out requests ",
+      "__EMPTY_2": "Call the hotel and make the request on behalf of the guest. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Early check-in or late check-out requests | __EMPTY_2: Call the hotel and make the request on behalf of the guest. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:11",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 11,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Early check-in or late check-out not honored",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If not agent error then advise these requests are to the discretion of the hotel. If the guest advises this is due to sales agent error then open a ticket for further review. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Early check-in or late check-out not honored | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If not agent error then advise these requests are to the discretion of the hotel. If the guest advises this is due to sales agent error then open a ticket for further review. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:12",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 12,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Hotel unaware of special requests or notes",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Hotel unaware of special requests or notes | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:13",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 13,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Additional deposits or incidentals required unexpectedly",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Additional deposits or incidentals required unexpectedly | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:14",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 14,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Long wait times or poor service at check-in",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. These options are to the discretion of the hotel and not in our control.",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Long wait times or poor service at check-in | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. These options are to the discretion of the hotel and not in our control. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:15",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 15,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Duplicate bookings made accidentally",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES ",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Duplicate bookings made accidentally | __EMPTY_3: NO | __EMPTY_4: YES | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:16",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 16,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Room type, Bed type or accessibility features not honored or Modifying Room Request",
+      "__EMPTY_2": "1. Call the hotel and ask them to move the guest to the appropriate room or requested room type 2. If the hotel refuses to do the change complimentary then ask them how much the upgrade or room change will cost. If the hotel agrees to charge a fee or the upgrade then advise the guest to pay the charge upon arrival. Ask the guest to email the receipt of the charge to Reservations@HotelPlanner.com for reimbursement. 3. If the hotel refuses all changes and requires a new reservation, confirm with the front desk the property has availabitlity if we rebook the guest for the correct room type, once the hotel confirms they do, request a cancellation on the existing room for FOC to rebook the guest, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Advise the guest you will rebook them for the correct room if the guest agrees, create a voucher and rebook them for their preferred room type. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 6. If the guest declines support then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 7. Process a refund via the queue for the client and advise them of the refund timeline (2-7 business days).",
+      "__EMPTY_3": "Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES.",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Room type, Bed type or accessibility features not honored or Modifying Room Request | __EMPTY_2: 1. Call the hotel and ask them to move the guest to the appropriate room or requested room type 2. If the hotel refuses to do the change complimentary then ask them how much the upgrade or room change will cost. If the hotel agrees to charge a fee or the upgrade then advise the guest to pay the charge upon arrival. Ask the guest to email the receipt of the charge to Reservations@HotelPlanner.com for reimbursement. 3. If the hotel refuses all changes and requires a new reservation, confirm with the front desk the property has availabitlity if we rebook the guest for the correct room type, once the hotel confirms they do, request a cancellation on the existing room for FOC to rebook the guest, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Advise the guest you will rebook them for the correct room if the guest agrees, create a voucher and rebook them for their preferred room type. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 6. If the guest declines support then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 7. Process a refund via the queue for the client and advise them of the refund timeline (2-7 business days). | __EMPTY_3: Yes - Only for same day check in's. NO SLACK FOR FUTURE DATES. | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:17",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 17,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Promised amenities missing (breakfast, parking, Wi-Fi, view)",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Promised amenities missing (breakfast, parking, Wi-Fi, view) | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:18",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 18,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Rate does not include expected inclusions",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Rate does not include expected inclusions | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:19",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 19,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Pricing & Payment Issues ",
+      "__EMPTY_2": "Instructions",
+      "__EMPTY_3": "Slack​",
+      "__EMPTY_4": "Refund Queue",
+      "__EMPTY_5": "Create a Ticket",
+      "__EMPTY_6": "Supervisor ",
+      "__EMPTY_7": "VIPRES"
+    },
+    "text": "__EMPTY_1: Pricing & Payment Issues | __EMPTY_2: Instructions | __EMPTY_3: Slack​ | __EMPTY_4: Refund Queue | __EMPTY_5: Create a Ticket | __EMPTY_6: Supervisor | __EMPTY_7: VIPRES"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:20",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 20,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Payment declined at check-in despite prepayment",
+      "__EMPTY_2": "1. Call Supplier, 2. If unpaid by the Supplier in 20 minutes 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). EXCEPTION IS DERBYSOFT ** INSTEAD OF CALLING THE SUPPLIER** ASK THE CHANNEL MANAGER FOR THE VIRTUAL CARD. IF NOT PROVIDED IN 20 MINUTES; MOVE FORWARD WITH REBOOKING THE GUEST.",
+      "__EMPTY_3": "YES",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Payment declined at check-in despite prepayment | __EMPTY_2: 1. Call Supplier, 2. If unpaid by the Supplier in 20 minutes 3. Create a Voucher and Rebook (if current hotel has inventory) or Relocate by Booking at a near by hotel. ** Do your best to upgrade the client's room type  to use full voucher value for their new reservation** The exception would be in they are lowering the number of nights they will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 5. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 5. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 6. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). EXCEPTION IS DERBYSOFT ** INSTEAD OF CALLING THE SUPPLIER** ASK THE CHANNEL MANAGER FOR THE VIRTUAL CARD. IF NOT PROVIDED IN 20 MINUTES; MOVE FORWARD WITH REBOOKING THE GUEST. | __EMPTY_3: YES | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:21",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 21,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Hotel requests payment again for a prepaid booking",
+      "__EMPTY_2": "1. Call the Supplier to provide payment for the hotel. 2. If unpaid by the Supplier in 20 minutes create a ticket and advise the hotel we will have this resolved in 24 hours. EXCEPTION IS DERBYSOFT ASK THE CHANNEL MANAGER FOR THE VIRTUAL CARD. IF NOT PROVIDED WITHIN 5 MINUTES; OPEN A TICKET AND ADVISE THE HOTEL WE WILL HAVE THIS RESOLVED IN 24 HOURS. ",
+      "__EMPTY_3": "YES",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "YES  (If unresolved in the call)",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Hotel requests payment again for a prepaid booking | __EMPTY_2: 1. Call the Supplier to provide payment for the hotel. 2. If unpaid by the Supplier in 20 minutes create a ticket and advise the hotel we will have this resolved in 24 hours. EXCEPTION IS DERBYSOFT ASK THE CHANNEL MANAGER FOR THE VIRTUAL CARD. IF NOT PROVIDED WITHIN 5 MINUTES; OPEN A TICKET AND ADVISE THE HOTEL WE WILL HAVE THIS RESOLVED IN 24 HOURS. | __EMPTY_3: YES | __EMPTY_4: NO | __EMPTY_5: YES  (If unresolved in the call) | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:22",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 22,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Charged more than expected  (resort fees or local fees)",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Charged more than expected  (resort fees or local fees) | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:23",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 23,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Price Matching & Complaints regarding Tax Recovery & Fees",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Price Matching & Complaints regarding Tax Recovery & Fees | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:24",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 24,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Currency conversion discrepancies",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - If they accept 15% compensation",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Currency conversion discrepancies | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - If they accept 15% compensation | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:25",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 25,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Refund delays after cancellation or modification",
+      "__EMPTY_2": "Review and Create a Refund in the Refund Queue",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Refund delays after cancellation or modification | __EMPTY_2: Review and Create a Refund in the Refund Queue | __EMPTY_3: NO | __EMPTY_4: YES | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:26",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 26,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Discrepanies from booking refundable vs. non-refundable ",
+      "__EMPTY_2": " (Prepaid) 1. Create a voucher via the refund queue and rebook the guest for the correct policy. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** The exception would be in the client is lowering the number of nights the client will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred policy or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. 6. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property and provide it to the guest to request a free cancellation.",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - for a voucher if rebooking",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Discrepanies from booking refundable vs. non-refundable | __EMPTY_2: (Prepaid) 1. Create a voucher via the refund queue and rebook the guest for the correct policy. ** Do your best to upgrade the client's room type to use full voucher value for their new reservation** The exception would be in the client is lowering the number of nights the client will expect a refund of the unused night(s). If there are any unused funds; Process a refund via the queue for the client and advise of the refund timeline (2-7 business days). 2. After the guest has their new reservation and confirmation let them go and place yourself on DND. 3. Call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Process a refund via the queue for the client and advise of the refund timeline (2-7 business days).  (Pay at Hotel) 1. Call the hotel, ask for FOC from the hotel, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 4. Rebook the client for their perferred policy or near by hotel if inventory is not available. 5. Complete the reservation, confirm the guest has received their confirmation and note the orginial booking with the new itinerary. 6. If the guest declines support and requests a refund; then call the hotel and obtain FOC, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property and provide it to the guest to request a free cancellation. | __EMPTY_3: NO | __EMPTY_4: YES - for a voucher if rebooking | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:27",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 27,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Unable to \"Create a Refund\" in the refund queue",
+      "__EMPTY_2": "The refund tool is not working ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": "YES"
+    },
+    "text": "__EMPTY_1: Unable to \"Create a Refund\" in the refund queue | __EMPTY_2: The refund tool is not working | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO | __EMPTY_7: YES"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:28",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 28,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Supplier, Hotel, and Group Calls ",
+      "__EMPTY_2": "Instructions",
+      "__EMPTY_3": "Slack​",
+      "__EMPTY_4": "Refund Queue",
+      "__EMPTY_5": "Create a Ticket",
+      "__EMPTY_6": "Supervisor ",
+      "__EMPTY_7": "VIPRES"
+    },
+    "text": "__EMPTY_1: Supplier, Hotel, and Group Calls | __EMPTY_2: Instructions | __EMPTY_3: Slack​ | __EMPTY_4: Refund Queue | __EMPTY_5: Create a Ticket | __EMPTY_6: Supervisor | __EMPTY_7: VIPRES"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:29",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 29,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Hotel Calls ",
+      "__EMPTY_2": "Reassigne to VIPRES@HotelPlanner",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": "YES"
+    },
+    "text": "__EMPTY_1: Hotel Calls | __EMPTY_2: Reassigne to VIPRES@HotelPlanner | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO | __EMPTY_7: YES"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:30",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 30,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Supplier Calls ",
+      "__EMPTY_2": "Reassigne to VIPRES@HotelPlanner",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": "YES"
+    },
+    "text": "__EMPTY_1: Supplier Calls | __EMPTY_2: Reassigne to VIPRES@HotelPlanner | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO | __EMPTY_7: YES"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:31",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 31,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Group Clients ",
+      "__EMPTY_2": "Client is unable to contact the agent assigned/planner for their Group Request and/or unable to access their account",
+      "__EMPTY_3": "Yes",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Group Clients | __EMPTY_2: Client is unable to contact the agent assigned/planner for their Group Request and/or unable to access their account | __EMPTY_3: Yes | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:32",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 32,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Cancellation & Confirmations",
+      "__EMPTY_2": "Instructions",
+      "__EMPTY_3": "Slack​",
+      "__EMPTY_4": "Refund Queue",
+      "__EMPTY_5": "Create a Ticket",
+      "__EMPTY_6": "Supervisor ",
+      "__EMPTY_7": "VIPRES"
+    },
+    "text": "__EMPTY_1: Cancellation & Confirmations | __EMPTY_2: Instructions | __EMPTY_3: Slack​ | __EMPTY_4: Refund Queue | __EMPTY_5: Create a Ticket | __EMPTY_6: Supervisor | __EMPTY_7: VIPRES"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:33",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 33,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Cancelling Refundable ",
+      "__EMPTY_2": "If a guest is requesting to cancel a refundable room, select cancel, and confirm their refund was processed. If the refund does not process automatically then put the refund into the refund queue. Do not refund the RPP. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - if not processed automatically",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Cancelling Refundable | __EMPTY_2: If a guest is requesting to cancel a refundable room, select cancel, and confirm their refund was processed. If the refund does not process automatically then put the refund into the refund queue. Do not refund the RPP. | __EMPTY_3: NO | __EMPTY_4: YES - if not processed automatically | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:34",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 34,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Cancelling Non Refundable ",
+      "__EMPTY_2": "If a guest is requesting to cancel a non refundable room type (reasons why we would process are agent error, hotel closure or unable to accept the guest, unpredictable or dangerous weather conditions, death, flight cancellations, medical, emergencies, gesture of goodwill due to the hotel's exception). 1. Check to see if the reservation has RPP, if yes offer to email the claim link to the client or the guest can receive 100% voucher immediately. If the guest denies the voucher please reach out to the hotel to see if we can obtain a waiver. 2. Call the hotel and request FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. If you are unable to obtain FOC, ask the hotel for a waiver minus one night (for multi nights), if it's still denied then we can offer the guest the option to add a name so a friend or family member can use the room. If none of these options are acceptable we would offer 100% voucher or 50% refund. Make sure the guest is aware the hotel is denying the refund in case they would like to contact the hotel directly for a full waiver. If you do obtain FOC then note the request accurately and completely. Then process a refund via the Refund Queue for the amount you were able to get waived. Advise the guest of the refund timeline (2-7 business days). Do not refund the RPP. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - when applicable ",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Cancelling Non Refundable | __EMPTY_2: If a guest is requesting to cancel a non refundable room type (reasons why we would process are agent error, hotel closure or unable to accept the guest, unpredictable or dangerous weather conditions, death, flight cancellations, medical, emergencies, gesture of goodwill due to the hotel's exception). 1. Check to see if the reservation has RPP, if yes offer to email the claim link to the client or the guest can receive 100% voucher immediately. If the guest denies the voucher please reach out to the hotel to see if we can obtain a waiver. 2. Call the hotel and request FOC, note the booking accurately with the hotel staff member's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. If you are unable to obtain FOC, ask the hotel for a waiver minus one night (for multi nights), if it's still denied then we can offer the guest the option to add a name so a friend or family member can use the room. If none of these options are acceptable we would offer 100% voucher or 50% refund. Make sure the guest is aware the hotel is denying the refund in case they would like to contact the hotel directly for a full waiver. If you do obtain FOC then note the request accurately and completely. Then process a refund via the Refund Queue for the amount you were able to get waived. Advise the guest of the refund timeline (2-7 business days). Do not refund the RPP. | __EMPTY_3: NO | __EMPTY_4: YES - when applicable | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:35",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 35,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Conflicting information between hotel and booking provider",
+      "__EMPTY_2": "Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES - if they accept 15% compensation",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Conflicting information between hotel and booking provider | __EMPTY_2: Offer the guest 15% compensation and create the refund request in the refund queue. If they decline and ask for more money please have the guest send their receipt or a copy of the charge to Reservations@HotelPlanner.com. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES - if they accept 15% compensation | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:36",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 36,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Guest directed to the wrong customer service provider",
+      "__EMPTY_2": "Ask the guest if they can review the charge to confirm who it is from and if it includes a phone number to call. If the guest can not a phone number and would like it reviewed; Please ask the guest to forward their charges to Reservations@HotelPlanner.com, please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Guest directed to the wrong customer service provider | __EMPTY_2: Ask the guest if they can review the charge to confirm who it is from and if it includes a phone number to call. If the guest can not a phone number and would like it reviewed; Please ask the guest to forward their charges to Reservations@HotelPlanner.com, please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:37",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 37,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Confirmation email not received or went to spam",
+      "__EMPTY_2": "If the guest needs a copy of their confirmation please confirm their email address and cell phone number to resend them a copy. Confirm it was received before disconnecting the call. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Confirmation email not received or went to spam | __EMPTY_2: If the guest needs a copy of their confirmation please confirm their email address and cell phone number to resend them a copy. Confirm it was received before disconnecting the call. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:38",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 38,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Delayed or unclear resolution timelines",
+      "__EMPTY_2": "If the guest wishes to speak with a manager please ask them to email VIPRES@HotelPlanner.com to contact our Service Managers; please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "YES",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Delayed or unclear resolution timelines | __EMPTY_2: If the guest wishes to speak with a manager please ask them to email VIPRES@HotelPlanner.com to contact our Service Managers; please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: YES"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:39",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 39,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Post Stay Issues",
+      "__EMPTY_2": "Instructions",
+      "__EMPTY_3": "Slack​",
+      "__EMPTY_4": "Refund Queue",
+      "__EMPTY_5": "Create a Ticket",
+      "__EMPTY_6": "Supervisor ",
+      "__EMPTY_7": "VIPRES"
+    },
+    "text": "__EMPTY_1: Post Stay Issues | __EMPTY_2: Instructions | __EMPTY_3: Slack​ | __EMPTY_4: Refund Queue | __EMPTY_5: Create a Ticket | __EMPTY_6: Supervisor | __EMPTY_7: VIPRES"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:40",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 40,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Incorrect final charges",
+      "__EMPTY_2": "Advise the guest they can forward the receipt along with their itinerary to Reservations@HotelPlanner.com for review and reimbursement; please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Incorrect final charges | __EMPTY_2: Advise the guest they can forward the receipt along with their itinerary to Reservations@HotelPlanner.com for review and reimbursement; please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:41",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 41,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Missing or delayed refunds",
+      "__EMPTY_2": "Review and Create a Refund in the Refund Queue",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Missing or delayed refunds | __EMPTY_2: Review and Create a Refund in the Refund Queue | __EMPTY_3: NO | __EMPTY_4: YES | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:42",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 42,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Disputes over no-show or cancellation fees",
+      "__EMPTY_2": "Provide the guest with the following email to work with the dispute department directly ChargeReview@HotelPlanner.com;  please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Disputes over no-show or cancellation fees | __EMPTY_2: Provide the guest with the following email to work with the dispute department directly ChargeReview@HotelPlanner.com;  please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:43",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 43,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Hotel provided internal receipt to guest",
+      "__EMPTY_2": "Ask the client to email the receipt to Reservations@HotelPlanner.com;  please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Hotel provided internal receipt to guest | __EMPTY_2: Ask the client to email the receipt to Reservations@HotelPlanner.com;  please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:44",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 44,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Needs receipt or invoice",
+      "__EMPTY_2": "If the guest needs a copy of their confirmation please confirm their email address and cell phone number to resend them a copy. Confirm it was received before disconnecting the call. If the guest needs a detailed receipt, breakdown, or tax exempt please open a ticket for them under \"Needs Receipt\". Let the guest know we will have it completed in 24 hours and emailed over. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "YES - only for option 2",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": "YES"
+    },
+    "text": "__EMPTY_1: Needs receipt or invoice | __EMPTY_2: If the guest needs a copy of their confirmation please confirm their email address and cell phone number to resend them a copy. Confirm it was received before disconnecting the call. If the guest needs a detailed receipt, breakdown, or tax exempt please open a ticket for them under \"Needs Receipt\". Let the guest know we will have it completed in 24 hours and emailed over. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: YES - only for option 2 | __EMPTY_6: NO | __EMPTY_7: YES"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:45",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 45,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Double Charged ",
+      "__EMPTY_2": "Please ask the guest to forward their charges to Reservations@HotelPlanner.com, please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Double Charged | __EMPTY_2: Please ask the guest to forward their charges to Reservations@HotelPlanner.com, please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:46",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 46,
+    "fields": {
+      "__EMPTY": "?",
+      "__EMPTY_1": "Mismatch between listing description and actual property",
+      "__EMPTY_2": "Please ask the guest to forward their screenshot to Reservations@HotelPlanner.com, please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY: ? | __EMPTY_1: Mismatch between listing description and actual property | __EMPTY_2: Please ask the guest to forward their screenshot to Reservations@HotelPlanner.com, please stay connected to the guest while they send this over and let them know we will have an update in 24 hours. Confirm we have the guests correct email and make sure the notes are accurate and complete. | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:47",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 47,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Early departure after check in ",
+      "__EMPTY_2": "1. Ask the guest if the guest notified the property or received approval from the property for early departure. If the guest has a hotel staff name please note it down. 2.Call the hotel and obtain FOC for unused nights, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. Process a refund via the queue for the client of the unused nights and advise of the refund timeline (2-7 business days). ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Early departure after check in | __EMPTY_2: 1. Ask the guest if the guest notified the property or received approval from the property for early departure. If the guest has a hotel staff name please note it down. 2.Call the hotel and obtain FOC for unused nights, note the booking accurately with the hotel staff member 's name, (if possible) the cancellation number, and the email address for the hotel manager or front desk. If you do not obtain FOC, take down hotel staff member's name and email address for the property. 3. Process a refund via the queue for the client of the unused nights and advise of the refund timeline (2-7 business days). | __EMPTY_3: NO | __EMPTY_4: YES | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:48",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 48,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Asking for a refund on \"REFUND PROTECTION PLAN\"",
+      "__EMPTY_2": "If the guest requests for this plan to be cancelled and refunded, please click on void the policy and the refund will be processed automatically. If it's outside the 14 days to select \"void\" then you will note the booking accurately and process the refund amount only of the RPP in the Refund Queue. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Asking for a refund on \"REFUND PROTECTION PLAN\" | __EMPTY_2: If the guest requests for this plan to be cancelled and refunded, please click on void the policy and the refund will be processed automatically. If it's outside the 14 days to select \"void\" then you will note the booking accurately and process the refund amount only of the RPP in the Refund Queue. | __EMPTY_3: NO | __EMPTY_4: YES | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:49",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 49,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Promised accessible or handicapped room was not provided ",
+      "__EMPTY_2": "Offer the guest 15% compensation if they utilized the room and create the refund request in the refund queue. If the guest was not able to use the room issue a refund via the refund queue. Note the booking accurately and in detail. ",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "YES",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": ""
+    },
+    "text": "__EMPTY_1: Promised accessible or handicapped room was not provided | __EMPTY_2: Offer the guest 15% compensation if they utilized the room and create the refund request in the refund queue. If the guest was not able to use the room issue a refund via the refund queue. Note the booking accurately and in detail. | __EMPTY_3: NO | __EMPTY_4: YES | __EMPTY_5: NO | __EMPTY_6: NO"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:50",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 50,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Call Review Needed ",
+      "__EMPTY_2": "Move these over to the Clean up Tab",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": "Clean Up Tab"
+    },
+    "text": "__EMPTY_1: Call Review Needed | __EMPTY_2: Move these over to the Clean up Tab | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO | __EMPTY_7: Clean Up Tab"
+  },
+  {
+    "id": "Matrix-2026:Ticket Matrix:row:51",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Ticket Matrix",
+    "row": 51,
+    "fields": {
+      "__EMPTY": "",
+      "__EMPTY_1": "Legal or Government Complaints",
+      "__EMPTY_2": "Move these over to VIPRES",
+      "__EMPTY_3": "NO",
+      "__EMPTY_4": "NO",
+      "__EMPTY_5": "NO",
+      "__EMPTY_6": "NO",
+      "__EMPTY_7": "VIPRES"
+    },
+    "text": "__EMPTY_1: Legal or Government Complaints | __EMPTY_2: Move these over to VIPRES | __EMPTY_3: NO | __EMPTY_4: NO | __EMPTY_5: NO | __EMPTY_6: NO | __EMPTY_7: VIPRES"
+  },
+  {
+    "id": "Matrix-2026:Items to note:row:1",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Items to note",
+    "row": 1,
+    "fields": {
+      "When requesting FOC or Partial Unused Rooms": "TEAK (Protecht) ",
+      "You may not always get FOC so if the hotel denies FOC then ask for FOC minus first night penalty on multiple night reservations.": "We will not be removing this when we are processing refunds",
+      "** it's the hotel's industry standards to charge one night penalty on reservations": "** refunding RPP only when the guest asks for it to be removed"
+    },
+    "text": "When requesting FOC or Partial Unused Rooms: TEAK (Protecht) | You may not always get FOC so if the hotel denies FOC then ask for FOC minus first night penalty on multiple night reservations.: We will not be removing this when we are processing refunds | ** it's the hotel's industry standards to charge one night penalty on reservations: ** refunding RPP only when the guest asks for it to be removed"
+  },
+  {
+    "id": "Matrix-2026:Items to note:row:2",
+    "source": "Matrix-2026",
+    "type": "excel",
+    "sheet": "Items to note",
+    "row": 2,
+    "fields": {
+      "When requesting FOC or Partial Unused Rooms": "Ticket Timeline",
+      "You may not always get FOC so if the hotel denies FOC then ask for FOC minus first night penalty on multiple night reservations.": "Agents will have 72 hours to resolve an issue, if left unresolved in 72 hours the ticket will be transferred to a view for it to be reviewed and solved in house.",
+      "** it's the hotel's industry standards to charge one night penalty on reservations": "** key for this step is in avoiding disputes "
+    },
+    "text": "When requesting FOC or Partial Unused Rooms: Ticket Timeline | You may not always get FOC so if the hotel denies FOC then ask for FOC minus first night penalty on multiple night reservations.: Agents will have 72 hours to resolve an issue, if left unresolved in 72 hours the ticket will be transferred to a view for it to be reviewed and solved in house. | ** it's the hotel's industry standards to charge one night penalty on reservations: ** key for this step is in avoiding disputes"
+  }
+]
