@@ -54,7 +54,7 @@ const res = await fetch(`${API_BASE}/api/ask`, {
       <header className="navbar">
         {/* left column (optional brand/title) */}
         <div className="navbar-side navbar-left">
-          <span className="navbar-title">Compliance Assistant</span>
+          <span className="navbar-title">Call-Center Compliance Assistant</span>
         </div>
 
         {/* center column (logo always centered) */}

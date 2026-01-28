@@ -15,6 +15,81 @@ body,
 }
 
 /* =========================
+   NAVBAR (CUSTOM)
+   ========================= */
+
+.navbar {
+  height: 64px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  padding: 10px 14px;
+  background: #212529; /* matches Bootstrap dark feel */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-left {
+  justify-content: flex-start;
+  min-width: 220px;
+}
+
+.navbar-right {
+  justify-content: flex-end;
+  min-width: 220px;
+}
+
+/* ✅ FIX: Make app name white */
+.navbar-title {
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+/* Center logo always centered */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo video */
+.navbar-logo-video {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+  transition: all 0.35s ease;
+  opacity: 0.95;
+}
+
+/* Bigger while loading */
+.navbar-logo-video.loading {
+  height: 86px;
+  opacity: 1;
+  filter: drop-shadow(0 0 18px rgba(111, 209, 255, 0.6));
+  transform: scale(1.05);
+}
+
+/* Mode dropdown sizing (your inline style can stay too) */
+.navbar select {
+  max-width: 190px;
+}
+
+/* =========================
    HERO CONTAINER (FULL SCREEN)
    ========================= */
 
@@ -58,7 +133,7 @@ body,
 
 .hero-overlay {
   position: absolute;
-  top: 14%; /* 🔼 moved UP */
+  top: 14%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -77,12 +152,11 @@ body,
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
-  max-height: 72vh;          /* ✅ prevents page stretch */
+  max-height: 72vh; /* prevents page stretch */
   display: flex;
   flex-direction: column;
 }
 
-/* Card body should scroll internally */
 .hero-overlay .card-body {
   overflow: hidden;
   display: flex;
@@ -101,9 +175,8 @@ body,
   color: #e6e6e6;
   font-size: 14px;
   line-height: 1.5;
-
-  max-height: 260px;   /* 🔒 controlled height */
-  overflow-y: auto;    /* ✅ scrolls instead of pushing */
+  max-height: 260px;
+  overflow-y: auto; /* scroll inside instead of pushing page */
 }
 
 /* Headings inside markdown */
@@ -117,30 +190,9 @@ body,
 .answer-source {
   margin-top: 12px;
   padding-top: 10px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 12px;
   color: #9aa4ad;
-}
-
-/* =========================
-   NAVBAR LOGO VIDEO
-   ========================= */
-
-.navbar {
-  height: 64px;
-}
-
-.navbar-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.navbar-logo-video {
-  height: 54px; /* 🔥 bigger logo */
-  width: auto;
-  object-fit: contain;
-  pointer-events: none;
 }
 
 /* =========================
@@ -148,54 +200,40 @@ body,
    ========================= */
 
 @media (max-width: 768px) {
-  .hero-overlay {
-    top: 10%;
-    max-width: 92%;
+  .navbar {
+    grid-template-columns: 1fr auto 1fr;
+    padding: 8px 10px;
   }
+
+ .navbar-title {
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  overflow: visible;      /* ✅ important */
+  text-overflow: unset;   /* ✅ important */
+}
+
 
   .navbar-logo-video {
     height: 42px;
+  }
+
+  .navbar-logo-video.loading {
+    height: 64px;
+  }
+
+  .hero-overlay {
+    top: 10%;
+    max-width: 92%;
   }
 
   .answer-card {
     max-height: 220px;
   }
 }
-/* =========================
-   NAVBAR LOGO – LOADING EFFECT
-   ========================= */
-
-.navbar-logo-video {
-  height: 54px;
-  width: auto;
-  object-fit: contain;
-  pointer-events: none;
-  transition: all 0.4s ease;
-  opacity: 0.9;
-}
-
-/* 🔥 Bigger + more presence while loading */
-.navbar-logo-video.loading {
-  height: 86px;                 /* ⬅️ bigger */
-  opacity: 1;
-  filter: drop-shadow(0 0 18px rgba(111, 209, 255, 0.6));
-  transform: scale(1.05);
-}
-.navbar-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar-logo-video {
-  height: 48px;
-  transition: transform 0.3s ease;
-}
-
-/* Bigger when loading */
-.loading-big {
-  height: 80px;
+.navbar-left {
+  justify-content: flex-start;
+  min-width: 320px;   /* ⬅️ was too small before */
 }
