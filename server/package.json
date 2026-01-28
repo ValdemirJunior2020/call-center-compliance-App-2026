@@ -7,12 +7,15 @@
     "dev": "node server.js"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.2",
+    "ai": "^6.0.58",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "multer": "^2.0.2",
-    "openai": "^4.0.0",
-    "pdf-parse": "^2.4.5",
+    "open": "^11.0.0",
+    "openai": "^4.104.0",
+    "pdf-parse": "^1.1.1",
     "xlsx": "^0.18.5"
   }
 }
