@@ -72,6 +72,37 @@ function parseRouting(remindersText) {
   return out;
 }
 
+// ✅ Determines if a routing value should be green/red/neutral
+function getSignal(value) {
+  const v = String(value || "").trim();
+  if (!v) return "neutral";
+
+  const up = v.toUpperCase();
+
+  // Strong NO signals
+  if (up === "NO" || up.startsWith("NO ") || up.includes(" NO ") || up.includes("NONE")) return "no";
+
+  // Strong YES signals
+  if (up === "YES" || up.startsWith("YES ") || up.includes(" YES ")) return "yes";
+
+  // If it's like "Yes - Only for same day..."
+  if (up.startsWith("YES -") || up.startsWith("YES/") || up.startsWith("YES,")) return "yes";
+  if (up.startsWith("NO -") || up.startsWith("NO/") || up.startsWith("NO,")) return "no";
+
+  return "neutral";
+}
+
+// ✅ Text for the button: show YES/NO when clear
+function getBadgeText(value) {
+  const v = String(value || "").trim();
+  if (!v) return "—";
+  const up = v.toUpperCase();
+  if (up.includes("NONE")) return "NO";
+  if (up.startsWith("YES")) return "YES";
+  if (up.startsWith("NO")) return "NO";
+  return "INFO";
+}
+
 export default function App() {
   const [mode, setMode] = useState("Matrix-2026");
   const [question, setQuestion] = useState("");
@@ -124,6 +155,11 @@ export default function App() {
     }
   }
 
+  const slackSig = getSignal(routing.Slack);
+  const rqSig = getSignal(routing["Refund Queue"]);
+  const ticketSig = getSignal(routing["Create a Ticket"]);
+  const supSig = getSignal(routing.Supervisor);
+
   return (
     <div className="app-shell">
       {/* NAVBAR */}
@@ -133,7 +169,6 @@ export default function App() {
         </div>
 
         <div className="navbar-side navbar-center">
-          {/* ✅ Your logo animation video in the center */}
           <video
             className={`navbar-logo-video ${loading ? "loading" : ""}`}
             src={NAV_LOGO_VIDEO_SRC}
@@ -157,7 +192,6 @@ export default function App() {
 
       {/* HERO */}
       <div className="hero-container">
-        {/* ✅ Hero background image */}
         <img className="hero-img" src={HERO_IMG_SRC} alt="Hero background" />
 
         <div className="hero-overlay">
@@ -199,18 +233,52 @@ export default function App() {
                   <div className="routing-strip">
                     <div className="routing-item">
                       <div className="routing-label">Slack</div>
+
+                      {/* ✅ pressed button */}
+                      <button
+                        type="button"
+                        className={`route-pill ${slackSig}`}
+                        title={routing.Slack || ""}
+                      >
+                        {getBadgeText(routing.Slack)}
+                      </button>
+
                       <div className="routing-value tone-neutral">{routing.Slack || "—"}</div>
                     </div>
+
                     <div className="routing-item">
                       <div className="routing-label">Refund Queue</div>
+                      <button
+                        type="button"
+                        className={`route-pill ${rqSig}`}
+                        title={routing["Refund Queue"] || ""}
+                      >
+                        {getBadgeText(routing["Refund Queue"])}
+                      </button>
                       <div className="routing-value tone-neutral">{routing["Refund Queue"] || "—"}</div>
                     </div>
+
                     <div className="routing-item">
                       <div className="routing-label">Create a Ticket</div>
+                      <button
+                        type="button"
+                        className={`route-pill ${ticketSig}`}
+                        title={routing["Create a Ticket"] || ""}
+                      >
+                        {getBadgeText(routing["Create a Ticket"])}
+                      </button>
                       <div className="routing-value tone-neutral">{routing["Create a Ticket"] || "—"}</div>
                     </div>
+
                     <div className="routing-item">
                       <div className="routing-label">Supervisor</div>
+                      <button
+                        type="button"
+                        className={`route-pill ${supSig}`}
+                        title={routing.Supervisor || ""}
+                      >
+                        {getBadgeText(routing.Supervisor)}
+                      </button>
                       <div className="routing-value tone-neutral">{routing.Supervisor || "—"}</div>
                     </div>
                   </div>
