@@ -2,208 +2,177 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
+
 import { createMatrixSearcher } from "./lib/searchMatrix.js";
-import { ragAnswer } from "./lib/ragAnswer.js";
 
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: "2mb" }));
 
-const searchMatrix = createMatrixSearcher({
-  knowledgePath: "./knowledge/knowledge.json",
-});
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
+// ===== Load Matrix Knowledge =====
+const matrixPath = path.join(__dirname, "knowledge", "matrix-2026.json");
+const searchMatrix = createMatrixSearcher({ knowledgePath: matrixPath });
+
+// ===== Health Check =====
 app.get("/health", (req, res) => {
   res.json({
     ok: true,
-    openaiKeyLoaded: !!process.env.OPENAI_API_KEY,
-    anthropicKeyLoaded: !!process.env.ANTHROPIC_API_KEY,
+    matrixPath: "./knowledge/matrix-2026.json",
+    anthropicKeyLoaded: Boolean(process.env.ANTHROPIC_API_KEY),
+    claudeModelEnv: process.env.CLAUDE_MODEL || null,
   });
 });
 
-/**
- * POST /api/ask
- * body: { mode: "Matrix-2026", question: "...", engine?: "openai"|"claude" }
- */
-app.post("/api/ask", async (req, res) => {
-  try {
-    const { mode, question, engine } = req.body || {};
-
-    if (!mode) {
-      return res.status(400).json({
-        answer: "Please select a knowledge base first.",
-        source: "System",
-      });
-    }
-
-    const q = String(question || "").trim();
-    if (!q || q.length < 3) {
-      return res.status(400).json({
-        answer: "Please enter a question.",
-        source: "System",
-      });
-    }
-
-    // ---------- MATRIX-2026 (deterministic) ----------
-    if (mode === "Matrix-2026") {
-      const results = searchMatrix(q, { topK: 8 });
-
-      // If nothing looks relevant
-      if (!results?.hits?.length || results.hits[0].score < 0.18) {
-        return res.json({
-          answer:
-            "escalation / what to do first\nnot covered in documentation.\n\nquick answer\nnot covered in documentation.\n\nsteps to follow\nnot covered in documentation.\n\nSlack: not specified\nRefund Queue: not specified\nCreate a Ticket: not specified\nSupervisor: not specified\n\nsource rows\nSOURCE: Matrix-2026",
-          source: "Matrix-2026",
-          proof: [],
-          debug: {
-            topScore: results?.hits?.[0]?.score ?? 0,
-            matchedCount: results?.hits?.length ?? 0,
-          },
-        });
-      }
-
-      // Pick the best row
-      const top = results.hits[0];
-
-      const quick = top.description || top.issue || top.title || q;
-
-      const instructionsRaw = String(top.instructions || "").trim();
-      const steps = splitSteps(instructionsRaw);
-
-      const escalation = buildEscalation(top);
-
-      const answerText = formatMatrixAnswer({
-        escalation,
-        quickAnswer: quick,
-        steps,
-        routing: {
-          slack: top.slack,
-          refundQueue: top.refundQueue,
-          createTicket: top.ticket || top.createTicket,
-          supervisor: top.supervisor,
-        },
-        sourceRows: [`Matrix-2026 > ${top.tab || "Unknown Tab"} > Row ${top.row ?? "?"}`],
-      });
-
-      const proof = results.hits.slice(0, 5).map((h) => ({
-        tab: h.tab || "Unknown Tab",
-        row: h.row ?? null,
-        score: round3(h.score),
-      }));
-
-      return res.json({
-        answer: answerText,
-        source: `Matrix-2026 • Engine: ${engine === "claude" ? "Claude" : "ChatGPT"}`,
-        proof,
-        debug: {
-          topScore: round3(top.score),
-          matchedCount: results.hits.length,
-        },
-      });
-    }
-
-    // ---------- OTHER MODES (optional RAG) ----------
-    const ai = await ragAnswer({
-      question: q,
-      mode: String(mode),
-      hits: [],
-      engine: engine || "openai",
-    });
-
-    return res.json({
-      answer: ai.answer,
-      source: ai.source || `Mode: ${mode}`,
-      citations: ai.citations || [],
-    });
-  } catch (err) {
-    console.error("ASK ERROR:", err);
-    res.status(500).json({
-      answer: "Server error while answering from the knowledge base.",
-      source: "System",
-    });
-  }
+// ===== Debug Search (safe) =====
+app.get("/debug/search", (req, res) => {
+  const q = String(req.query.q || "hotel sold out");
+  const hits = searchMatrix(q, { topK: 5 });
+  res.json({
+    query: q,
+    matchedCount: hits.length,
+    topScore: hits[0]?.score ?? 0,
+    topHit: hits[0] || null,
+    sample: hits,
+  });
 });
 
-function round3(n) {
-  const x = Number(n || 0);
-  return Math.round(x * 1000) / 1000;
+function formatRoutingLine(label, value) {
+  const v = String(value || "not specified").trim() || "not specified";
+  return `${label}: ${v}`;
 }
 
-function splitSteps(instructionsRaw) {
-  if (!instructionsRaw) return [];
+/**
+ * ✅ Extracts numbered steps from a long instruction string.
+ * Works with patterns like:
+ *  "1. Call Supplier, 2. If unconfirmed..., 3. Create a Voucher..."
+ * Also cleans duplicate spaces and stray markdown symbols.
+ */
+function extractNumberedSteps(instructions) {
+  const raw = String(instructions || "").trim();
+  if (!raw) return [];
 
-  const normalized = String(instructionsRaw).replace(/\r/g, "\n");
+  // Normalize some formatting
+  let text = raw
+    .replace(/\r\n/g, "\n")
+    .replace(/\s+/g, " ")
+    .replace(/\*\*/g, "") // remove **bold**
+    .trim();
 
-  if (/\b1\./.test(normalized)) {
-    const parts = normalized
-      .split(/\b\d+\.\s*/g)
-      .map((s) => s.trim())
-      .filter(Boolean);
-    return parts;
-  }
+  // Insert a newline before each "N." so we can split reliably
+  // Example: "..., 2. ..." -> "\n2. ..."
+  text = text.replace(/(\s|,)(\d+)\.\s+/g, "\n$2. ");
 
-  if (/\b1\.\s*[^]+,\s*2\./.test(normalized)) {
-    const parts = normalized
-      .split(/\s*,\s*(?=\d+\.)/g)
-      .map((s) => s.replace(/^\d+\.\s*/, "").trim())
-      .filter(Boolean);
-    return parts;
-  }
-
-  const lines = normalized
+  const lines = text
     .split("\n")
     .map((l) => l.trim())
     .filter(Boolean);
 
-  if (lines.length > 1) return lines;
+  // Keep only lines that start with "N."
+  const numbered = lines.filter((l) => /^\d+\.\s+/.test(l));
 
-  return [String(instructionsRaw).trim()];
+  // If we successfully got numbered lines, clean them
+  if (numbered.length) {
+    return numbered
+      .map((l) => l.replace(/^\d+\.\s+/, "").trim())
+      .filter(Boolean);
+  }
+
+  // Fallback: if matrix didn't use numbers, create one step as-is
+  return [text];
 }
 
-function normalizeCell(v) {
-  const s = String(v ?? "").trim();
-  return s ? s : "not specified";
-}
+// ===== Main Ask Endpoint =====
+app.post("/api/ask", async (req, res) => {
+  try {
+    const { mode, question } = req.body || {};
+    const q = String(question || "").trim();
 
-function buildEscalation(row) {
-  const sup = String(row?.supervisor ?? "").trim();
-  if (!sup) return "follow matrix routing (check Supervisor column).";
+    if (!q) return res.status(400).json({ error: "Missing question" });
+    if (mode !== "Matrix-2026") {
+      return res.status(400).json({ error: `Unsupported mode: ${mode}` });
+    }
 
-  const up = sup.toUpperCase();
-  if (up.includes("YES")) return "escalate to supervisor (yes).";
-  if (up.includes("NO") || up.includes("NONE")) return "escalate to supervisor (no).";
-  return `escalate to supervisor (${sup}).`;
-}
+    const hits = searchMatrix(q, { topK: 10 });
+    const top = hits[0];
+    const topScore = top?.score ?? 0;
 
-function formatMatrixAnswer({ escalation, quickAnswer, steps, routing, sourceRows }) {
-  const slack = normalizeCell(routing?.slack);
-  const refundQueue = normalizeCell(routing?.refundQueue);
-  const createTicket = normalizeCell(routing?.createTicket);
-  const supervisor = normalizeCell(routing?.supervisor);
+    // If we cannot match, do not invent anything
+    if (!top || topScore <= 0) {
+      const answer =
+        `Acknowledge\n` +
+        `I understand the scenario, but it is not clearly covered in the Matrix-2026 documentation.\n\n` +
+        `Matrix Reference\n` +
+        `Matrix-2026: Not covered (no matching row found)\n\n` +
+        `Step-by-step Guidance\n` +
+        `1. Follow the closest applicable documented procedure if available.\n` +
+        `2. If still unclear, escalate for guidance.\n\n` +
+        `Reminders / Escalation\n` +
+        `${formatRoutingLine("Slack", "not specified")}\n` +
+        `${formatRoutingLine("Refund Queue", "not specified")}\n` +
+        `${formatRoutingLine("Create a Ticket", "not specified")}\n` +
+        `${formatRoutingLine("Supervisor", "recommended (not specified in matrix)")}\n\n` +
+        `Source\n` +
+        `Matrix-2026`;
+      return res.json({
+        answer,
+        source: "Matrix-2026 • Engine: Matrix-only",
+        proof: [],
+        debug: { topScore: 0, matchedCount: 0 },
+      });
+    }
 
-  const stepsBlock =
-    steps && steps.length
-      ? steps.map((s) => `- ${s}`).join("\n")
-      : "No instructions listed for this row in Matrix-2026.";
+    // Routing from best match
+    const routing = {
+      slack: top.slack || "not specified",
+      refundQueue: top.refundQueue || "not specified",
+      ticket: top.ticket || "not specified",
+      supervisor: top.supervisor || "not specified",
+    };
 
-  const sources =
-    sourceRows && sourceRows.length
-      ? sourceRows.map((s) => `SOURCE: ${s}`).join("\n")
-      : "SOURCE: Matrix-2026";
+    // ✅ Matrix-only steps (no Claude required)
+    const extractedSteps = extractNumberedSteps(top.instructions);
 
-  return (
-    `escalation / what to do first\n${String(escalation || "").toLowerCase()}\n\n` +
-    `quick answer\n${quickAnswer || "not covered in documentation."}\n\n` +
-    `steps to follow\n${stepsBlock}\n\n` +
-    `Slack: ${slack}\n` +
-    `Refund Queue: ${refundQueue}\n` +
-    `Create a Ticket: ${createTicket}\n` +
-    `Supervisor: ${supervisor}\n\n` +
-    `source rows\n${sources}`
-  );
-}
+    const acknowledge =
+      `I understand the scenario: "${q}". Based on the Matrix-2026 guide, the closest match is the procedure below.`;
+
+    const matrixRef = `${top.tab} → Row ${top.row} → ${top.description}`;
+
+    const stepsBlock = extractedSteps.length
+      ? extractedSteps.map((s, i) => `${i + 1}. ${s}`).join("\n")
+      : `1. not covered in documentation.`;
+
+    const reminders =
+      `${formatRoutingLine("Slack", routing.slack)}\n` +
+      `${formatRoutingLine("Refund Queue", routing.refundQueue)}\n` +
+      `${formatRoutingLine("Create a Ticket", routing.ticket)}\n` +
+      `${formatRoutingLine("Supervisor", routing.supervisor)}\n\n` +
+      `If the scenario still does not fit exactly or the customer escalates, follow the routing above and escalate to a supervisor when required by the matrix.`;
+
+    const answer =
+      `Acknowledge\n${acknowledge}\n\n` +
+      `Matrix Reference\n${matrixRef}\n\n` +
+      `Step-by-step Guidance\n${stepsBlock}\n\n` +
+      `Reminders / Escalation\n${reminders}\n\n` +
+      `Source\nMatrix-2026`;
+
+    return res.json({
+      answer,
+      source: "Matrix-2026 • Engine: Matrix-only",
+      proof: hits.slice(0, 6),
+      debug: { topScore, matchedCount: hits.length },
+    });
+  } catch (err) {
+    console.error("ERROR /api/ask:", err);
+    return res.status(500).json({ error: "Server error" });
+  }
+});
 
 const PORT = process.env.PORT || 5050;
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server listening on http://localhost:${PORT}`);
 });

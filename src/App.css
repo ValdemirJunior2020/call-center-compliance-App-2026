@@ -365,3 +365,14 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* Steps list (safe add-on, does not affect your layout) */
+.steps-list {
+  margin: 6px 0 0 18px;
+  padding: 0;
+}
+
+.steps-item {
+  margin: 8px 0;
+  line-height: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+}

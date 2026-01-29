@@ -1,153 +1,330 @@
 // server/lib/searchMatrix.js
 import fs from "fs";
 
-function normKey(s) {
+/**
+ * Supports both formats:
+ * 1) Array rows: [{ sheet, row_number, text, keywords: [] }, ...]
+ * 2) Object rows: { rows: [...] }
+ */
+
+function normText(s) {
   return String(s ?? "")
-    .replace(/[\u200b\u200c\u200d\uFEFF]/g, "") // remove zero-width chars
-    .trim()
-    .toLowerCase();
-}
-
-function pickFromRaw(raw, wanted) {
-  if (!raw || typeof raw !== "object") return "";
-  const w = normKey(wanted);
-
-  // direct-ish match
-  for (const k of Object.keys(raw)) {
-    if (normKey(k) === w) {
-      const v = raw[k];
-      return v == null ? "" : String(v).trim();
-    }
-  }
-
-  // fallback: "Refund Queue" could be "RefundQueue", etc.
-  for (const k of Object.keys(raw)) {
-    const nk = normKey(k).replace(/\s+/g, "");
-    const nw = w.replace(/\s+/g, "");
-    if (nk === nw) {
-      const v = raw[k];
-      return v == null ? "" : String(v).trim();
-    }
-  }
-
-  return "";
+    .replace(/[\u200b\u200c\u200d\uFEFF]/g, "")
+    .replace(/[’']/g, "'")
+    .toLowerCase()
+    .trim();
 }
 
 function safeString(v) {
   if (v == null) return "";
-  const s = String(v).trim();
-  return s;
+  return String(v).trim();
 }
 
-function buildSearchText(row) {
-  // Keep it simple and strong for matching
-  const parts = [
-    row.issue,
-    row.title,
-    row.description,
-    row.instructions,
-    row.tab,
-    // include raw text too (helps a lot)
-    row.raw ? Object.values(row.raw).join(" ") : "",
-  ]
-    .filter(Boolean)
-    .map((x) => String(x));
+function tokenize(text) {
+  return normText(text)
+    .replace(/[^a-z0-9\s-]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean);
+}
 
-  return parts.join(" ").replace(/\s+/g, " ").trim();
+// Phrase synonyms (expand as you like)
+const PHRASE_SYNONYMS = [
+  ["hotel sold out", "sold out"],
+  ["no availability", "sold out"],
+  ["fully booked", "sold out"],
+  ["no rooms", "sold out"],
+  ["no room", "sold out"],
+
+  ["money back", "refund"],
+  ["reimbursement", "refund"],
+  ["reimburse", "refund"],
+
+  ["change dates", "modify dates"],
+  ["change date", "modify dates"],
+  ["move my reservation", "modify reservation"],
+  ["change my reservation", "modify reservation"],
+];
+
+function applyPhraseSynonyms(text) {
+  let t = normText(text);
+  for (const [from, to] of PHRASE_SYNONYMS) {
+    const f = normText(from);
+    const r = normText(to);
+    t = t.split(f).join(r);
+  }
+  return t;
+}
+
+/**
+ * ✅ Query expansions to map "not-in-matrix" phrasing to the closest matrix scenario.
+ * Per your decision: "sold out / no availability" should map to:
+ *   Voice Matrix → "Reservation not found at check-in"
+ */
+const QUERY_EXPANSIONS = [
+  {
+    triggers: ["sold out", "fully booked", "no availability", "no rooms", "no room"],
+    // Terms that exist in/near the "Reservation not found at check-in" instructions
+    add: [
+      "reservation",
+      "not",
+      "found",
+      "check-in",
+      "supplier",
+      "unconfirmed",
+      "voucher",
+      "rebook",
+      "relocate",
+      "inventory",
+    ],
+  },
+];
+
+function expandQuery(text) {
+  const t = applyPhraseSynonyms(text);
+  const lower = normText(t);
+
+  const extra = new Set();
+  for (const rule of QUERY_EXPANSIONS) {
+    if (rule.triggers.some((tr) => lower.includes(normText(tr)))) {
+      rule.add.forEach((w) => extra.add(normText(w)));
+    }
+  }
+
+  if (extra.size) return `${t} ${Array.from(extra).join(" ")}`;
+  return t;
+}
+
+function tokenizeQuery(text) {
+  return tokenize(expandQuery(text));
+}
+
+/**
+ * Very common words that hurt matching.
+ * Note: we do NOT stopword "sold" and "out" — we want those to stay meaningful.
+ */
+const STOPWORDS = new Set([
+  "a",
+  "an",
+  "the",
+  "and",
+  "or",
+  "to",
+  "of",
+  "in",
+  "on",
+  "for",
+  "with",
+  "at",
+  "by",
+  "from",
+  "is",
+  "are",
+  "be",
+  "been",
+  "being",
+  "it",
+  "this",
+  "that",
+  "as",
+  "can",
+  "could",
+  "should",
+  "would",
+  "will",
+  "just",
+  "please",
+  "help",
+  "need",
+  "want",
+
+  // domain-generic terms that appear everywhere:
+  "hotel",
+  "issue",
+  "issues",
+  "request",
+  "requests",
+  "guest",
+  "customer",
+  "client",
+  "booking",
+  "bookings",
+  "stay",
+  "date",
+  "dates",
+  "night",
+  "nights",
+]);
+
+function filterStopwords(tokens) {
+  return tokens.filter((t) => !STOPWORDS.has(t));
+}
+
+/**
+ * Parse your row.text
+ */
+function parseMatrixText(text) {
+  const raw = safeString(text);
+  const parts = raw.split("|").map((p) => p.trim()).filter(Boolean);
+
+  let issue = "";
+  let instructions = "";
+  let slack = "";
+  let refundQueue = "";
+  let ticket = "";
+  let supervisor = "";
+
+  if (parts.length) {
+    const first = parts[0];
+    const idx = first.toLowerCase().indexOf("instructions:");
+    if (idx !== -1) {
+      issue = first.slice(0, idx).trim();
+      instructions = first.slice(idx + "instructions:".length).trim();
+    } else {
+      issue = first.trim();
+    }
+  }
+
+  for (const p of parts) {
+    const pl = p.toLowerCase();
+
+    if (pl.startsWith("instructions:")) {
+      instructions = p.slice("instructions:".length).trim();
+      continue;
+    }
+    if (pl.startsWith("slack")) {
+      slack = p.split(":").slice(1).join(":").trim();
+      continue;
+    }
+    if (pl.startsWith("refund queue")) {
+      refundQueue = p.split(":").slice(1).join(":").trim();
+      continue;
+    }
+    if (pl.startsWith("create a ticket")) {
+      ticket = p.split(":").slice(1).join(":").trim();
+      continue;
+    }
+    if (pl.startsWith("supervisor")) {
+      supervisor = p.split(":").slice(1).join(":").trim();
+      continue;
+    }
+  }
+
+  return { issue, instructions, slack, refundQueue, ticket, supervisor };
+}
+
+/**
+ * Weighted scoring:
+ * - query tokens (after stopword filter) must match document tokens
+ * - keyword matches count heavier
+ */
+function scoreWeighted({ queryTokens, docTokensSet, keywordSet }) {
+  if (!queryTokens.length) return 0;
+
+  let hits = 0;
+  let keywordHits = 0;
+
+  for (const t of queryTokens) {
+    if (keywordSet && keywordSet.has(t)) keywordHits += 1;
+    if (docTokensSet.has(t)) hits += 1;
+  }
+
+  const base = hits / queryTokens.length;
+
+  // keyword boost (up to +0.35)
+  const kwBoost =
+    keywordSet && queryTokens.length
+      ? Math.min(0.35, (keywordHits / queryTokens.length) * 0.6)
+      : 0;
+
+  return base + kwBoost;
 }
 
 export function createMatrixSearcher({ knowledgePath }) {
-  const rawText = fs.readFileSync(knowledgePath, "utf-8");
-  const parsed = JSON.parse(rawText);
+  if (!knowledgePath) throw new Error("knowledgePath is required");
 
-  // Support either:
-  // 1) array of rows
-  // 2) { rows: [...] }
-  const rows = Array.isArray(parsed) ? parsed : Array.isArray(parsed?.rows) ? parsed.rows : [];
+  const raw = JSON.parse(fs.readFileSync(knowledgePath, "utf8"));
+  const rows = Array.isArray(raw) ? raw : Array.isArray(raw?.rows) ? raw.rows : [];
 
-  // Normalize rows into the shape your server expects
-  const normalized = rows.map((r, idx) => {
-    const raw = r.raw && typeof r.raw === "object" ? r.raw : null;
+  const corpus = [];
 
-    const issue = safeString(r.issue || r.title || r.problem || r.scenario || pickFromRaw(raw, "Hotel & Reservation Issues"));
-    const instructions = safeString(r.instructions || pickFromRaw(raw, "Instructions"));
+  for (const row of rows) {
+    const sheet = safeString(row.sheet || row.tab || "");
+    const rowNum = row.row_number ?? row.row ?? row.id ?? "";
 
-    const slack =
-      safeString(r.slack) ||
-      safeString(r.Slack) ||
-      pickFromRaw(raw, "Slack");
+    const text = safeString(row.text || "");
+    const parsed = parseMatrixText(text);
 
-    const refundQueue =
-      safeString(r.refundQueue) ||
-      safeString(r.refund_queue) ||
-      safeString(r["Refund Queue"]) ||
-      pickFromRaw(raw, "Refund Queue");
+    const description = parsed.issue || safeString(row.description || row.issue || "");
+    const instructions = parsed.instructions || safeString(row.instructions || "");
 
-    const ticket =
-      safeString(r.ticket) ||
-      safeString(r.createTicket) ||
-      safeString(r["Create a Ticket"]) ||
-      pickFromRaw(raw, "Create a Ticket");
+    const slack = parsed.slack || safeString(row.slack || "");
+    const refundQueue = parsed.refundQueue || safeString(row.refundQueue || "");
+    const ticket = parsed.ticket || safeString(row.ticket || "");
+    const supervisor = parsed.supervisor || safeString(row.supervisor || "");
 
-    const supervisor =
-      safeString(r.supervisor) ||
-      safeString(r.Supervisor) ||
-      pickFromRaw(raw, "Supervisor");
+    const keywords = Array.isArray(row.keywords) ? row.keywords : [];
+    const keywordTokens = keywords.map((k) => normText(k)).filter(Boolean);
+    const keywordSet = new Set(keywordTokens);
 
-    const tab = safeString(r.tab || r.sheet || r.Tab || "");
-    const rowNum = Number(r.row ?? r.rowNumber ?? r.excelRow ?? NaN);
-    const row = Number.isFinite(rowNum) ? rowNum : null;
-
-    const id = safeString(r.id) || `${tab || "sheet"}-${row || idx + 1}`;
-
-    const doc = {
-      id,
-      tab,
-      row,
-      issue,
-      description: issue, // keep compatibility with your server.js
+    const searchText = [
+      sheet,
+      description,
       instructions,
       slack,
       refundQueue,
       ticket,
       supervisor,
-      raw,
-    };
+      keywordTokens.join(" "),
+      text,
+    ]
+      .filter(Boolean)
+      .join(" | ");
 
-    return {
-      ...doc,
-      __search: buildSearchText(doc).toLowerCase(),
-    };
-  });
+    const docTokens = new Set(filterStopwords(tokenize(searchText)));
 
-  function scoreMatch(query, text) {
-    // Tiny scoring — good enough and fast
-    const q = query.toLowerCase().trim();
-    if (!q) return 0;
-
-    // give credit for each token found
-    const tokens = q.split(/\s+/).filter(Boolean);
-    let hits = 0;
-    for (const t of tokens) {
-      if (t.length < 2) continue;
-      if (text.includes(t)) hits += 1;
-    }
-    // normalize 0..1-ish
-    return hits / Math.max(tokens.length, 1);
+    corpus.push({
+      tab: sheet,
+      row: rowNum,
+      description,
+      instructions,
+      slack,
+      refundQueue,
+      ticket,
+      supervisor,
+      _tokens: docTokens,
+      _keywordSet: keywordSet,
+    });
   }
 
-  return function searchMatrix(query, { topK = 8 } = {}) {
-    const q = String(query || "").trim();
-    const scored = normalized
-      .map((row) => ({
-        ...row,
-        score: scoreMatch(q, row.__search),
-      }))
+  return function searchMatrix(query, { topK = 10 } = {}) {
+    const qTokensRaw = tokenizeQuery(safeString(query));
+    const qTokens = filterStopwords(qTokensRaw);
+
+    if (!qTokens.length) return [];
+
+    const scored = corpus
+      .map((c) => {
+        const s = scoreWeighted({
+          queryTokens: qTokens,
+          docTokensSet: c._tokens,
+          keywordSet: c._keywordSet,
+        });
+        return {
+          tab: c.tab,
+          row: c.row,
+          score: s,
+          description: c.description,
+          instructions: c.instructions,
+          slack: c.slack,
+          refundQueue: c.refundQueue,
+          ticket: c.ticket,
+          supervisor: c.supervisor,
+        };
+      })
+      .filter((x) => x.score > 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, topK);
 
-    return {
-      hits: scored.map(({ __search, ...rest }) => rest),
-    };
+    return scored;
   };
 }
