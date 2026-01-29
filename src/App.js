@@ -4,17 +4,11 @@ import "./App.css";
 
 const API_BASE = process.env.REACT_APP_API_BASE_URL || "http://localhost:5050";
 
-// ✅ Your real public paths
+// public assets
 const HERO_IMG_SRC = "/background/hero.png";
 const NAV_LOGO_VIDEO_SRC = "/logo-animation-video.mp4";
 
-const HEADINGS = [
-  "Acknowledge",
-  "Matrix Reference",
-  "Step-by-step Guidance",
-  "Reminders / Escalation",
-  "Source",
-];
+const HEADINGS = ["Acknowledge", "Matrix Reference", "Step-by-step Guidance", "Source"];
 
 function parseAnswerSections(answerText) {
   const text = String(answerText || "");
@@ -49,50 +43,18 @@ function extractNumberedSteps(stepSectionText) {
   return steps;
 }
 
-function parseRouting(remindersText) {
-  const out = {
-    Slack: "",
-    "Refund Queue": "",
-    "Create a Ticket": "",
-    Supervisor: "",
-  };
-
-  const lines = String(remindersText || "").split("\n").map((l) => l.trim());
-  for (const line of lines) {
-    if (!line) continue;
-    const idx = line.indexOf(":");
-    if (idx === -1) continue;
-
-    const key = line.slice(0, idx).trim();
-    const val = line.slice(idx + 1).trim();
-
-    if (key in out) out[key] = val;
-  }
-
-  return out;
-}
-
-// ✅ Determines if a routing value should be green/red/neutral
+// ✅ Determines if routing should be green/red/neutral
 function getSignal(value) {
   const v = String(value || "").trim();
   if (!v) return "neutral";
 
   const up = v.toUpperCase();
-
-  // Strong NO signals
-  if (up === "NO" || up.startsWith("NO ") || up.includes(" NO ") || up.includes("NONE")) return "no";
-
-  // Strong YES signals
-  if (up === "YES" || up.startsWith("YES ") || up.includes(" YES ")) return "yes";
-
-  // If it's like "Yes - Only for same day..."
-  if (up.startsWith("YES -") || up.startsWith("YES/") || up.startsWith("YES,")) return "yes";
-  if (up.startsWith("NO -") || up.startsWith("NO/") || up.startsWith("NO,")) return "no";
-
+  if (up.includes("NONE")) return "no";
+  if (up === "NO" || up.startsWith("NO")) return "no";
+  if (up === "YES" || up.startsWith("YES")) return "yes";
   return "neutral";
 }
 
-// ✅ Text for the button: show YES/NO when clear
 function getBadgeText(value) {
   const v = String(value || "").trim();
   if (!v) return "—";
@@ -116,10 +78,11 @@ export default function App() {
     () => extractNumberedSteps(sections["Step-by-step Guidance"]),
     [sections]
   );
-  const routing = useMemo(
-    () => parseRouting(sections["Reminders / Escalation"] || ""),
-    [sections]
-  );
+
+  // ✅ routing now comes from backend JSON (not from answer text)
+  const routing = apiResult?.routing || null;
+
+  const showRouting = Boolean(routing); // only show pills when routing exists
 
   async function onAsk(e) {
     e.preventDefault();
@@ -155,10 +118,10 @@ export default function App() {
     }
   }
 
-  const slackSig = getSignal(routing.Slack);
-  const rqSig = getSignal(routing["Refund Queue"]);
-  const ticketSig = getSignal(routing["Create a Ticket"]);
-  const supSig = getSignal(routing.Supervisor);
+  const slackSig = getSignal(routing?.slack);
+  const rqSig = getSignal(routing?.refundQueue);
+  const ticketSig = getSignal(routing?.ticket);
+  const supSig = getSignal(routing?.supervisor);
 
   return (
     <div className="app-shell">
@@ -180,11 +143,7 @@ export default function App() {
         </div>
 
         <div className="navbar-side navbar-right">
-          <select
-            className="mode-select"
-            value={mode}
-            onChange={(e) => setMode(e.target.value)}
-          >
+          <select className="mode-select" value={mode} onChange={(e) => setMode(e.target.value)}>
             <option value="Matrix-2026">Matrix-2026</option>
           </select>
         </div>
@@ -195,7 +154,7 @@ export default function App() {
         <img className="hero-img" src={HERO_IMG_SRC} alt="Hero background" />
 
         <div className="hero-overlay">
-          <div className="minimal-card">
+          <div className={`minimal-card ${loading ? "loading-glow" : ""}`}>
             <div className="minimal-body">
               <div className="header-row">
                 <div className="muted">
@@ -229,59 +188,46 @@ export default function App() {
               {/* ANSWER */}
               {apiResult?.answer ? (
                 <div className="answer-wrap">
-                  {/* ROUTING STRIP */}
-                  <div className="routing-strip">
-                    <div className="routing-item">
-                      <div className="routing-label">Slack</div>
+                  {/* ROUTING STRIP (ONLY when routing exists) */}
+                  {showRouting && (
+                    <div className="routing-strip">
+                      <div className="routing-item">
+                        <div className="routing-label">Slack</div>
+                        <button type="button" className={`route-pill ${slackSig}`} title={routing?.slack || ""}>
+                          <span className="route-icon">💬</span>
+                          {getBadgeText(routing?.slack)}
+                        </button>
+                        <div className="routing-value tone-neutral">{routing?.slack || "—"}</div>
+                      </div>
 
-                      {/* ✅ pressed button */}
-                      <button
-                        type="button"
-                        className={`route-pill ${slackSig}`}
-                        title={routing.Slack || ""}
-                      >
-                        {getBadgeText(routing.Slack)}
-                      </button>
+                      <div className="routing-item">
+                        <div className="routing-label">Refund Queue</div>
+                        <button type="button" className={`route-pill ${rqSig}`} title={routing?.refundQueue || ""}>
+                          <span className="route-icon">💳</span>
+                          {getBadgeText(routing?.refundQueue)}
+                        </button>
+                        <div className="routing-value tone-neutral">{routing?.refundQueue || "—"}</div>
+                      </div>
 
-                      <div className="routing-value tone-neutral">{routing.Slack || "—"}</div>
+                      <div className="routing-item">
+                        <div className="routing-label">Create a Ticket</div>
+                        <button type="button" className={`route-pill ${ticketSig}`} title={routing?.ticket || ""}>
+                          <span className="route-icon">🎫</span>
+                          {getBadgeText(routing?.ticket)}
+                        </button>
+                        <div className="routing-value tone-neutral">{routing?.ticket || "—"}</div>
+                      </div>
+
+                      <div className="routing-item">
+                        <div className="routing-label">Supervisor</div>
+                        <button type="button" className={`route-pill ${supSig}`} title={routing?.supervisor || ""}>
+                          <span className="route-icon">👤</span>
+                          {getBadgeText(routing?.supervisor)}
+                        </button>
+                        <div className="routing-value tone-neutral">{routing?.supervisor || "—"}</div>
+                      </div>
                     </div>
-
-                    <div className="routing-item">
-                      <div className="routing-label">Refund Queue</div>
-                      <button
-                        type="button"
-                        className={`route-pill ${rqSig}`}
-                        title={routing["Refund Queue"] || ""}
-                      >
-                        {getBadgeText(routing["Refund Queue"])}
-                      </button>
-                      <div className="routing-value tone-neutral">{routing["Refund Queue"] || "—"}</div>
-                    </div>
-
-                    <div className="routing-item">
-                      <div className="routing-label">Create a Ticket</div>
-                      <button
-                        type="button"
-                        className={`route-pill ${ticketSig}`}
-                        title={routing["Create a Ticket"] || ""}
-                      >
-                        {getBadgeText(routing["Create a Ticket"])}
-                      </button>
-                      <div className="routing-value tone-neutral">{routing["Create a Ticket"] || "—"}</div>
-                    </div>
-
-                    <div className="routing-item">
-                      <div className="routing-label">Supervisor</div>
-                      <button
-                        type="button"
-                        className={`route-pill ${supSig}`}
-                        title={routing.Supervisor || ""}
-                      >
-                        {getBadgeText(routing.Supervisor)}
-                      </button>
-                      <div className="routing-value tone-neutral">{routing.Supervisor || "—"}</div>
-                    </div>
-                  </div>
+                  )}
 
                   {/* MAIN ANSWER CARD */}
                   <div className="answer-card left-align">
@@ -301,28 +247,18 @@ export default function App() {
                         ))}
                       </ol>
                     ) : (
-                      <div className="section-text">
-                        {sections["Step-by-step Guidance"] || "Not covered in documentation."}
-                      </div>
+                      <div className="section-text">{sections["Step-by-step Guidance"] || "—"}</div>
                     )}
 
-                    <div className="section-title">Reminders / Escalation</div>
-                    <div className="section-text" style={{ whiteSpace: "pre-wrap" }}>
-                      {sections["Reminders / Escalation"] || "—"}
-                    </div>
-
                     <div className="answer-meta">
-                      <span className="meta-label">Engine:</span>{" "}
-                      {apiResult?.source || "Matrix-only"}
+                      <span className="meta-label">Engine:</span> {apiResult?.source || "Matrix-only"}
                     </div>
                   </div>
                 </div>
               ) : null}
 
               {loading ? (
-                <div className="loading-hint subtle">
-                  Loading… matching the closest matrix procedure.
-                </div>
+                <div className="loading-hint subtle">Loading… matching the closest matrix procedure.</div>
               ) : null}
             </div>
           </div>
