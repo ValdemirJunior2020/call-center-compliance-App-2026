@@ -1,50 +1,55 @@
-{
-  "document": "Matrix-2026",
-  "input_file": "C:\\Users\\Valdemir Goncalves\\Desktop\\Projetos-2026\\call-center-compliance-app\\server\\uploads\\Matrix-2026.xlsx",
-  "generated_at": "2026-01-27T19:32:00.718Z",
-  "sheets": [
-    {
-      "sheet": "Voice Matrix",
-      "header_row": 5,
-      "rows_in_sheet": 1027,
-      "entries_created": 47,
-      "headers_preview": [
-        "Column 1",
-        "Hotel & Reservation Issues",
-        "Instructions",
-        "Slack​",
-        "Refund Queue",
-        "Create a Ticket",
-        "Supervisor"
-      ]
-    },
-    {
-      "sheet": "Ticket Matrix",
-      "header_row": 5,
-      "rows_in_sheet": 1029,
-      "entries_created": 50,
-      "headers_preview": [
-        "Column 1",
-        "Hotel & Reservation Issues",
-        "Instructions",
-        "Slack​",
-        "Refund Queue",
-        "Create a Ticket",
-        "Supervisor",
-        "VIPRES"
-      ]
-    },
-    {
-      "sheet": "Items to note",
-      "header_row": 1,
-      "rows_in_sheet": 5,
-      "entries_created": 2,
-      "headers_preview": [
-        "When requesting FOC or Partial Unused Rooms",
-        "You may not always get FOC so if the hotel denies FOC then ask for FOC minus first night penalty on multiple night reservations.",
-        "** it's the hotel's industry standards to charge one night penalty on reservations"
-      ]
+[
+  {
+    "sheet": "Voice Matrix",
+    "headerRow": 5,
+    "headers": [
+      null,
+      "Hotel & Reservation Issues",
+      "Instructions",
+      "Slack",
+      "Refund Queue",
+      "Create a Ticket",
+      "Supervisor"
+    ],
+    "mappedColumns": {
+      "issue": "Hotel & Reservation Issues",
+      "instructions": "Instructions",
+      "slack": "Slack",
+      "refundQueue": "Refund Queue",
+      "ticket": "Create a Ticket",
+      "supervisor": "Supervisor"
     }
-  ],
-  "total_entries": 99
-}
+  },
+  {
+    "sheet": "Ticket Matrix",
+    "headerRow": 5,
+    "headers": [
+      null,
+      "Hotel & Reservation Issues",
+      "Instructions",
+      "Slack",
+      "Refund Queue",
+      "Create a Ticket",
+      "Supervisor",
+      "VIPRES"
+    ],
+    "mappedColumns": {
+      "issue": "Hotel & Reservation Issues",
+      "instructions": "Instructions",
+      "slack": "Slack",
+      "refundQueue": "Refund Queue",
+      "ticket": "Create a Ticket",
+      "supervisor": "Supervisor"
+    }
+  },
+  {
+    "sheet": "Items to note",
+    "headerRow": 1,
+    "headers": [
+      "When requesting FOC or Partial Unused Rooms",
+      "You may not always get FOC so if the hotel denies FOC then ask for FOC minus first night penalty on multiple night reservations.",
+      "** it's the hotel's industry standards to charge one night penalty on reservations"
+    ],
+    "mappedColumns": {}
+  }
+]

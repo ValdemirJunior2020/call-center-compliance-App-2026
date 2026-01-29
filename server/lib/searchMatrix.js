@@ -1,160 +1,153 @@
 // server/lib/searchMatrix.js
 import fs from "fs";
-import path from "path";
 
-/**
- * Normalize header keys coming from Excel/Sheets exports.
- * - removes zero-width characters
- * - trims
- * - lowercases
- * - collapses spaces
- */
-function normKey(k) {
-  return String(k || "")
-    .replace(/[\u200B-\u200D\uFEFF]/g, "") // zero-width chars
+function normKey(s) {
+  return String(s ?? "")
+    .replace(/[\u200b\u200c\u200d\uFEFF]/g, "") // remove zero-width chars
     .trim()
-    .toLowerCase()
-    .replace(/\s+/g, " ");
+    .toLowerCase();
 }
 
-/**
- * Safely pick a value from:
- * - row[key]
- * - row.fields[key]
- * using alias keys (case-insensitive + zero-width-safe)
- */
-function pick(row, aliases = []) {
-  const candidates = aliases.map(normKey);
+function pickFromRaw(raw, wanted) {
+  if (!raw || typeof raw !== "object") return "";
+  const w = normKey(wanted);
 
-  // 1) direct keys on row
-  for (const rawKey of Object.keys(row || {})) {
-    const nk = normKey(rawKey);
-    if (candidates.includes(nk)) {
-      const v = row[rawKey];
-      if (v !== undefined && v !== null && String(v).trim() !== "") return v;
+  // direct-ish match
+  for (const k of Object.keys(raw)) {
+    if (normKey(k) === w) {
+      const v = raw[k];
+      return v == null ? "" : String(v).trim();
     }
   }
 
-  // 2) keys inside row.fields (your knowledge.json uses fields.* a lot)
-  const fields = row?.fields && typeof row.fields === "object" ? row.fields : {};
-  for (const rawKey of Object.keys(fields)) {
-    const nk = normKey(rawKey);
-    if (candidates.includes(nk)) {
-      const v = fields[rawKey];
-      if (v !== undefined && v !== null && String(v).trim() !== "") return v;
+  // fallback: "Refund Queue" could be "RefundQueue", etc.
+  for (const k of Object.keys(raw)) {
+    const nk = normKey(k).replace(/\s+/g, "");
+    const nw = w.replace(/\s+/g, "");
+    if (nk === nw) {
+      const v = raw[k];
+      return v == null ? "" : String(v).trim();
     }
   }
 
   return "";
 }
 
-function normalizeCell(v) {
-  const s = String(v ?? "").trim();
-  return s ? s : "";
+function safeString(v) {
+  if (v == null) return "";
+  const s = String(v).trim();
+  return s;
 }
 
-/**
- * Build a text blob used for matching.
- * Keep it simple: issue/title/description + instructions.
- */
 function buildSearchText(row) {
-  const title = pick(row, ["title", "issue", "hotel & reservation issues"]);
-  const desc = pick(row, ["description", "details"]);
-  const instr = pick(row, ["instructions", "steps", "procedure"]);
-  return [title, desc, instr].filter(Boolean).join("\n").toLowerCase();
+  // Keep it simple and strong for matching
+  const parts = [
+    row.issue,
+    row.title,
+    row.description,
+    row.instructions,
+    row.tab,
+    // include raw text too (helps a lot)
+    row.raw ? Object.values(row.raw).join(" ") : "",
+  ]
+    .filter(Boolean)
+    .map((x) => String(x));
+
+  return parts.join(" ").replace(/\s+/g, " ").trim();
 }
 
-function scoreMatch(q, text) {
-  // very simple token overlap scoring (fast + deterministic)
-  const query = String(q || "").toLowerCase().trim();
-  if (!query) return 0;
+export function createMatrixSearcher({ knowledgePath }) {
+  const rawText = fs.readFileSync(knowledgePath, "utf-8");
+  const parsed = JSON.parse(rawText);
 
-  const qTokens = query.split(/[^a-z0-9]+/i).filter(Boolean);
-  if (!qTokens.length) return 0;
+  // Support either:
+  // 1) array of rows
+  // 2) { rows: [...] }
+  const rows = Array.isArray(parsed) ? parsed : Array.isArray(parsed?.rows) ? parsed.rows : [];
 
-  let hit = 0;
-  for (const t of qTokens) {
-    if (t.length < 2) continue;
-    if (text.includes(t)) hit += 1;
-  }
+  // Normalize rows into the shape your server expects
+  const normalized = rows.map((r, idx) => {
+    const raw = r.raw && typeof r.raw === "object" ? r.raw : null;
 
-  // normalize by query length
-  return hit / Math.max(4, qTokens.length);
-}
+    const issue = safeString(r.issue || r.title || r.problem || r.scenario || pickFromRaw(raw, "Hotel & Reservation Issues"));
+    const instructions = safeString(r.instructions || pickFromRaw(raw, "Instructions"));
 
-function loadKnowledge(knowledgePath) {
-  const fullPath = path.resolve(knowledgePath);
-  const raw = fs.readFileSync(fullPath, "utf-8");
-  const json = JSON.parse(raw);
+    const slack =
+      safeString(r.slack) ||
+      safeString(r.Slack) ||
+      pickFromRaw(raw, "Slack");
 
-  if (!Array.isArray(json)) {
-    throw new Error(
-      `knowledge.json must be an array. Got: ${typeof json} at ${fullPath}`
-    );
-  }
+    const refundQueue =
+      safeString(r.refundQueue) ||
+      safeString(r.refund_queue) ||
+      safeString(r["Refund Queue"]) ||
+      pickFromRaw(raw, "Refund Queue");
 
-  // Flatten routing fields onto the row so server.js can safely do top.slack etc.
-  return json.map((row, idx) => {
-    const slack = normalizeCell(pick(row, ["slack", "slack\u200b", "slack "])); // catches Slack + hidden chars
-    const refundQueue = normalizeCell(
-      pick(row, ["refund queue", "refundqueue", "queue"])
-    );
-    const ticket = normalizeCell(
-      pick(row, ["create a ticket", "ticket", "create ticket"])
-    );
-    const supervisor = normalizeCell(
-      pick(row, ["supervisor", "sup", "super visor"])
-    );
+    const ticket =
+      safeString(r.ticket) ||
+      safeString(r.createTicket) ||
+      safeString(r["Create a Ticket"]) ||
+      pickFromRaw(raw, "Create a Ticket");
 
-    const description = normalizeCell(
-      pick(row, ["description", "issue", "title", "hotel & reservation issues"])
-    );
+    const supervisor =
+      safeString(r.supervisor) ||
+      safeString(r.Supervisor) ||
+      pickFromRaw(raw, "Supervisor");
 
-    const instructions = normalizeCell(pick(row, ["instructions", "steps"]));
+    const tab = safeString(r.tab || r.sheet || r.Tab || "");
+    const rowNum = Number(r.row ?? r.rowNumber ?? r.excelRow ?? NaN);
+    const row = Number.isFinite(rowNum) ? rowNum : null;
 
-    return {
-      ...row,
-      // make sure these exist at the top level (this is what your server.js expects)
+    const id = safeString(r.id) || `${tab || "sheet"}-${row || idx + 1}`;
+
+    const doc = {
+      id,
+      tab,
+      row,
+      issue,
+      description: issue, // keep compatibility with your server.js
+      instructions,
       slack,
       refundQueue,
       ticket,
       supervisor,
-      description,
-      instructions,
-      // helpful for debugging
-      __idx: idx,
-      __searchText: buildSearchText({ ...row, slack, refundQueue, ticket, supervisor, description, instructions }),
+      raw,
+    };
+
+    return {
+      ...doc,
+      __search: buildSearchText(doc).toLowerCase(),
     };
   });
-}
 
-export function createMatrixSearcher({ knowledgePath }) {
-  const rows = loadKnowledge(knowledgePath);
+  function scoreMatch(query, text) {
+    // Tiny scoring — good enough and fast
+    const q = query.toLowerCase().trim();
+    if (!q) return 0;
 
-  return function searchMatrix(question, { topK = 8 } = {}) {
-    const q = String(question || "").trim();
-    const scored = rows
-      .map((r) => {
-        const s = scoreMatch(q, r.__searchText || "");
-        return { row: r, score: s };
-      })
+    // give credit for each token found
+    const tokens = q.split(/\s+/).filter(Boolean);
+    let hits = 0;
+    for (const t of tokens) {
+      if (t.length < 2) continue;
+      if (text.includes(t)) hits += 1;
+    }
+    // normalize 0..1-ish
+    return hits / Math.max(tokens.length, 1);
+  }
+
+  return function searchMatrix(query, { topK = 8 } = {}) {
+    const q = String(query || "").trim();
+    const scored = normalized
+      .map((row) => ({
+        ...row,
+        score: scoreMatch(q, row.__search),
+      }))
       .sort((a, b) => b.score - a.score)
       .slice(0, topK);
 
     return {
-      hits: scored.map(({ row, score }) => ({
-        score,
-        tab: row.tab || row?.meta?.tab || row?.sheet || "Unknown Tab",
-        row: row.row ?? row?.meta?.row ?? null,
-
-        // These are the ones your server.js uses:
-        description: row.description,
-        instructions: row.instructions,
-        slack: row.slack,
-        refundQueue: row.refundQueue,
-        ticket: row.ticket,
-        supervisor: row.supervisor,
-      })),
+      hits: scored.map(({ __search, ...rest }) => rest),
     };
   };
 }

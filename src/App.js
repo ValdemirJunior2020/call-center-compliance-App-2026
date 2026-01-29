@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import ReactMarkdown from "react-markdown";
@@ -12,16 +12,12 @@ export default function App() {
   const [proof, setProof] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  const [engine, setEngine] = useState("openai"); // openai | claude
 
   const API_BASE =
     process.env.REACT_APP_API_BASE_URL || "http://localhost:5050";
 
-  const ask = async (e, forcedEngine) => {
+  const askClaude = async (e) => {
     if (e) e.preventDefault();
-
-    const pickedEngine = forcedEngine || engine;
-    setEngine(pickedEngine);
 
     setErrorMsg("");
     setAnswer("");
@@ -37,10 +33,11 @@ export default function App() {
     try {
       setIsLoading(true);
 
+      // We always use Claude now (single engine)
       const res = await fetch(`${API_BASE}/api/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ mode, question: q, engine: pickedEngine }),
+        body: JSON.stringify({ mode, question: q, engine: "claude" }),
       });
 
       const data = await res.json();
@@ -71,12 +68,11 @@ export default function App() {
 
     const upper = v.toUpperCase();
 
+    // Green if contains YES anywhere (covers "Yes - Only for same day...")
     if (upper.includes("YES")) return { text: v, tone: "good" };
-    if (upper.includes("NO") || upper.includes("NONE"))
-      return { text: v, tone: "bad" };
 
-    if (upper.startsWith("YES")) return { text: v, tone: "good" };
-    if (upper.startsWith("NO") || upper.startsWith("NONE"))
+    // Red if contains NO or NONE anywhere
+    if (upper.includes("NO") || upper.includes("NONE"))
       return { text: v, tone: "bad" };
 
     return { text: v, tone: "neutral" };
@@ -90,7 +86,8 @@ export default function App() {
       const startIdx = t.search(startRe);
       if (startIdx === -1) return "";
 
-      const afterStart = t.slice(startIdx + t.match(startRe)[0].length);
+      const startMatch = t.match(startRe);
+      const afterStart = t.slice(startIdx + (startMatch?.[0]?.length || 0));
 
       let endIdx = afterStart.length;
       for (const end of endOptions) {
@@ -135,7 +132,7 @@ export default function App() {
     };
   };
 
-  const sections = extractSections(answer);
+  const sections = useMemo(() => extractSections(answer), [answer]);
 
   return (
     <div className="app-shell">
@@ -181,12 +178,11 @@ export default function App() {
               <div className="header-row">
                 <div className="muted">
                   Mode: <strong>{mode}</strong> <span className="dot">•</span>{" "}
-                  Engine:{" "}
-                  <strong>{engine === "claude" ? "Claude" : "ChatGPT"}</strong>
+                  Engine: <strong>Claude</strong>
                 </div>
               </div>
 
-              <form onSubmit={(e) => ask(e, engine)}>
+              <form onSubmit={askClaude}>
                 <textarea
                   className="form-control minimal-input"
                   rows={3}
@@ -196,34 +192,14 @@ export default function App() {
                   disabled={isLoading}
                 />
 
-                {/* Skeuo 3D button row */}
-                <div className="btn-row skeuo-row">
+                {/* SINGLE BUTTON */}
+                <div className="btn-row single">
                   <button
-                    type="button"
-                    className={`skeuo-btn ${
-                      engine === "openai" ? "is-active" : ""
-                    }`}
+                    type="submit"
+                    className="btn btn-skeuo w-100"
                     disabled={isLoading}
-                    onClick={(e) => ask(e, "openai")}
-                    aria-pressed={engine === "openai"}
                   >
-                    <span className="skeuo-btn__shine" />
-                    <span className="skeuo-btn__label">ChatGPT Help</span>
-                    <span className="skeuo-btn__dot" />
-                  </button>
-
-                  <button
-                    type="button"
-                    className={`skeuo-btn skeuo-btn--alt ${
-                      engine === "claude" ? "is-active" : ""
-                    }`}
-                    disabled={isLoading}
-                    onClick={(e) => ask(e, "claude")}
-                    aria-pressed={engine === "claude"}
-                  >
-                    <span className="skeuo-btn__shine" />
-                    <span className="skeuo-btn__label">Claude Help</span>
-                    <span className="skeuo-btn__dot" />
+                    {isLoading ? "Searching…" : "Claude Help"}
                   </button>
                 </div>
               </form>
@@ -232,9 +208,10 @@ export default function App() {
                 <div className="alert alert-warning mt-3 mb-0">{errorMsg}</div>
               ) : null}
 
+              {/* ANSWER AREA - SCROLLS INSIDE THE CARD */}
               {answer ? (
                 <div className="answer-wrap">
-                  {/* ROUTING STRIP (top row) */}
+                  {/* ROUTING STRIP */}
                   <div className="routing-strip">
                     <div className="routing-item">
                       <div className="routing-label">Slack</div>
@@ -330,8 +307,11 @@ export default function App() {
                 </div>
               ) : null}
 
-              {isLoading ? (
-                <div className="loading-hint">Searching documentation…</div>
+              {!answer && !isLoading ? (
+                <div className="loading-hint subtle">
+                  Tip: shorter keywords work best (example: “reservation not
+                  found”).
+                </div>
               ) : null}
             </div>
           </div>
