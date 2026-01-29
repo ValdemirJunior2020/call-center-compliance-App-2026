@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "version": "2026.1",
+    "type": "qa_form",
+    "qaType": "Groups",
+    "passThresholdPercent": 85,
+    "generatedAt": "2026-01-29T17:32:33.886Z"
+  },
+  "criteria": [
+    {
+      "id": "1.1",
+      "title": "Must be available and ready to take incoming call.",
+      "points": 4,
+      "qaType": "Groups",
+      "sheet": "Original QA",
+      "examples": [
+        {
+          "result": "NO",
+          "text": "No- if agent took more than 3 seconds to answer, OR begins prior to dial tune ending."
+        },
+        {
+          "result": "NA",
+          "text": "System issues (hardware or software), as long as it is not a recurrent condition. No need to Q/A an N/A!"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "1.2",
+      "title": "Must open the call with correct introduction.",
+      "points": 6,
+      "qaType": "Groups",
+      "sheet": "Original QA",
+      "examples": [
+        {
+          "result": "NO",
+          "text": "Agent does not provide correct introduction, -Agent provides a different name or alias."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "1.3",
+      "title": "Must take ownership of the customers request, reiterating the customers issue.",
+      "points": 5,
+      "qaType": "Groups",
+      "sheet": "Original QA",
+      "examples": [
+        {
+          "result": "NO",
+          "text": "Agent does not display understandin of guests request."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "2.2",
+      "title": "Must confirm an provide all relevant information to the owner of the reservation (first and last name, itinerary number, hotel name and booking dates, etc.) before triggering any process.",
+      "points": 20,
+      "qaType": "Groups",
+      "sheet": "Original QA",
+      "examples": [
+        {
+          "result": "NO",
+          "text": "Agent enters incomplete information and/or inserts it into the wrong location on the request form. Agent avoids entering information for a TA."
+        },
+        {
+          "result": "NA",
+          "text": "Guest did not require group RFP (Request For Proposal)"
+        },
+        {
+          "result": "YES",
+          "text": "Agent answers guest question with correct verbiage from page 7 of training manual, or honest answer. (ie…\"What I’m able to do for you is provide the best group rates for the hotels in this city and these group rates will be sent to you via email”)"
+        },
+        {
+          "result": "NO",
+          "text": "Agent Provides incorrect information pertaining to the request and/or the service we provide. Agent falsely represents information of the hotel and area details, location of agent. Agent provides hotel phone number, process of getting the phone number, or address for guest to contact hotel."
+        },
+        {
+          "result": "NA",
+          "text": "Guest did not require group RFP (Request For Proposal)"
+        },
+        {
+          "result": "YES",
+          "text": "Agent displays ownership throughout the call, by asking leading questions and completing the RFP."
+        },
+        {
+          "result": "NO",
+          "text": "Displaying uncertain behaviors with a show of lack of confidence."
+        },
+        {
+          "result": "YES",
+          "text": "Agent must be professional throughout the conversation, active listening for key information, not speaking over guest, avoiding jargon/slang/abbreviations; clear rate of speech, clear accent, proper use of vocabulary. To avoid dead air."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "3.1",
+      "title": "Must display active listening and allow customer to speak without interruption.",
+      "points": 0,
+      "qaType": "Groups",
+      "sheet": "Original QA",
+      "examples": [
+        {
+          "result": "YES",
+          "text": "Agent must recap all essential details during the call, either throughout the process of the call or at the end of the call to confirm accuracy. Agent must provide the following information to the guest prior to ending the call: * Email will be sent to guest in the next 15 minutes fr. Assigned Planner, with HotelPlanner login information *Recommend giving the hotels at least 24 hours to respond, as these rates are coming directly from the on site Sales Managers *Agent provided request ID# and password *Assisted caller to retrieve password if they already have a group account. *Agent offers further assistance to guest, give a \"thank you for calling\", allowing the guest to disconnect first."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "3.2",
+      "title": "Must notify the customer of the hold times and dead air.",
+      "points": 0,
+      "qaType": "Groups",
+      "sheet": "Original QA",
+      "examples": [],
+      "notes": [
+        "PASS?: PASSING SCORE IS =/> 85%"
+      ]
+    }
+  ]
+}

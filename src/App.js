@@ -79,10 +79,11 @@ export default function App() {
     [sections]
   );
 
-  // ✅ routing now comes from backend JSON (not from answer text)
+  // ✅ routing comes from backend JSON (not from answer text)
   const routing = apiResult?.routing || null;
 
-  const showRouting = Boolean(routing); // only show pills when routing exists
+  // ✅ only show routing pills when routing exists
+  const showRouting = Boolean(routing);
 
   async function onAsk(e) {
     e.preventDefault();
@@ -145,6 +146,8 @@ export default function App() {
         <div className="navbar-side navbar-right">
           <select className="mode-select" value={mode} onChange={(e) => setMode(e.target.value)}>
             <option value="Matrix-2026">Matrix-2026</option>
+            <option value="QA-Voice">QA-Voice</option>
+            <option value="QA-Groups">QA-Groups</option>
           </select>
         </div>
       </div>
@@ -156,11 +159,14 @@ export default function App() {
         <div className="hero-overlay">
           <div className={`minimal-card ${loading ? "loading-glow" : ""}`}>
             <div className="minimal-body">
-              <div className="header-row">
-                <div className="muted">
-                  Ask a scenario <span className="dot">•</span> Get matrix steps
-                </div>
-              </div>
+             <div className="header-row">
+  <div className="muted">
+    Ask a Matrix or QA scenario
+    <span className="dot">•</span>
+    Get policy-based guidance
+  </div>
+</div>
+
 
               <form onSubmit={onAsk}>
                 <textarea
@@ -168,7 +174,7 @@ export default function App() {
                   rows={4}
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
-                  placeholder='Example: "hotel sold out"'
+                  placeholder='Example: "Ask how an agent should handle a call or how QA should score it"'
                   style={{ width: "100%", padding: 12 }}
                 />
 
@@ -189,7 +195,7 @@ export default function App() {
               {apiResult?.answer ? (
                 <div className="answer-wrap">
                   {/* ROUTING STRIP (ONLY when routing exists) */}
-                  {showRouting && (
+                  {showRouting ? (
                     <div className="routing-strip">
                       <div className="routing-item">
                         <div className="routing-label">Slack</div>
@@ -227,7 +233,7 @@ export default function App() {
                         <div className="routing-value tone-neutral">{routing?.supervisor || "—"}</div>
                       </div>
                     </div>
-                  )}
+                  ) : null}
 
                   {/* MAIN ANSWER CARD */}
                   <div className="answer-card left-align">
@@ -258,7 +264,7 @@ export default function App() {
               ) : null}
 
               {loading ? (
-                <div className="loading-hint subtle">Loading… matching the closest matrix procedure.</div>
+                <div className="loading-hint subtle">Loading… matching the closest procedure.</div>
               ) : null}
             </div>
           </div>
